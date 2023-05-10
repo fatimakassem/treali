@@ -1582,5 +1582,31 @@ color: rgb(34, 104, 58);
     background-size: cover;
     position:relative;
 }
+.top {
+    --offset: 50px; 
+    text-align: right;
+    position: sticky;
+    bottom: 20px;      
+    margin-left:10px; 
+    place-self: end;
+    margin-top: calc(100vh + var(--offset));
+    
+    /* visual styling */
+    text-decoration: none;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    background: #000;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+  
+  
+  
+  /* remove the below if you don't want smooth scrolling */
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
 
 
