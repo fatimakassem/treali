@@ -25,7 +25,7 @@
     top: 0;
     width: 100%;
     background-color: #fff;
-    height: 12%;
+    height: 9%;
 }
 
 
@@ -98,7 +98,7 @@ label #cancel{
 }
 
 .nav-links{
-    margin-top: -20px;
+    margin-top: -38px;
     text-align: right;
 }
 .nav-links ul li{
@@ -795,6 +795,11 @@ margin: 0;
         .sidebar ul a i{
             margin-right:10px;
         }
+    .navbar{
+            height: 9%;
+        }
+        .nav-links{
+            margin-top: -20px;}
 
 
 
