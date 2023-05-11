@@ -1612,6 +1612,9 @@ color: rgb(34, 104, 58);
     border-radius: 100px;
     white-space: nowrap;
   }
+.top img{
+    width: 2%;
+  }
   
   
   
