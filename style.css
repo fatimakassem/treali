@@ -14,7 +14,7 @@
 .nav{
     position:absolute ;
     
-    padding:2% 6%;
+    
     justify-content: space-between;
     align-items: left;
    
@@ -26,6 +26,10 @@
     width: 100%;
     background-color: #fff;
     height: 9%;
+}
+.navbar img{
+    width: 5%;
+    margin-left: 5%;
 }
 
 
@@ -75,7 +79,7 @@ label #cancel{
 }
 
 label #btn{
-  
+    width: 4%;
     position: fixed;
     font-size: 30px;
     left:15px;
@@ -83,6 +87,7 @@ label #btn{
     padding:6px 12px;
 }
 label #cancel{
+    width: 3%;
     z-index: 1111;
     left:-200px;
     top:10px;
@@ -105,7 +110,7 @@ label #cancel{
     list-style:none;
     display:inline-block;
     padding:8px 12px;
-    position:relative;
+    margin-top: -10px;
 }
 .nav-links ul li a{
     color:#12121e;
@@ -664,6 +669,7 @@ margin: 0;
 
 
 @media only screen and (max-width: 600px) {
+    
     div.inner-we-do{
       font-size: 30px;
     }
@@ -688,8 +694,8 @@ margin: 0;
         text-align: center;
     }
     
-    nav img{
-        width: 50px;
+    .nav img{
+        width: 100%;
     
     }
     
@@ -736,25 +742,28 @@ margin: 0;
         
         font-size: 20px;
       }
+      
 
     .navbar{
        
         height: 5%;
     }
-    label #btn{
-        position: absolute;
-        font-size: 20px;
-        left:15px;
-        top:55px;
-        padding:6px 12px;
+    .navbar img{
+    width: 15%;
     }
 
     
-        label #cancel{
+    label #cancel{
             position: absolute;
             top: 2px;
+            width: 13%;
             
-        }
+    }
+    label #btn{
+        width: 16%;
+        top: 55px;
+        position: absolute;
+    }
 
 
 
@@ -795,14 +804,12 @@ margin: 0;
         .sidebar ul a i{
             margin-right:10px;
         }
-    .navbar{
+        .navbar{
             height: 9%;
         }
         .nav-links{
             margin-top: -20px;}
-
-
-
+           
   }
 
 
@@ -1612,6 +1619,11 @@ color: rgb(34, 104, 58);
   html,
   body {
     scroll-behavior: smooth;
+  }
+@media only screen and (max-width: 600px) {
+    .top img{
+    width: 10%;
+  }
   }
 
 
