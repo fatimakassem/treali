@@ -1634,7 +1634,7 @@ color: rgb(34, 104, 58);
     background-image:linear-gradient(rgba(255, 255, 255, 0.178),rgba(48, 101, 80, 0)),url(images/eqback.jpg);
     background-position: center;
     background-size: cover;
-    position:relative;
+   
   }
   .inner-equipss{
     margin-left: 5%;
@@ -1693,7 +1693,7 @@ color: rgb(34, 104, 58);
     background-position: center;
     background-size: cover;
     text-align: center;
-    margin-bottom: -2%;
+    
     margin-top: 5%;
     
 }
