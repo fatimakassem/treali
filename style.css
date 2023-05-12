@@ -1709,3 +1709,38 @@ color: rgb(34, 104, 58);
 }
 
 
+.contactus{
+    background-image:linear-gradient(rgba(232, 240, 237, 0),rgba(4, 30, 24, 0)),url(images/eqback22.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 15%;
+    margin-bottom: 10%;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+.contactus h3{
+    text-align: center;
+    margin-top: 5%;
+    font-size: 30px;
+}
+.con_col{
+    text-align: center;
+    margin-top:4%;
+    margin-bottom: 7%;
+    line-height: 1.9;
+}
+.con_col img{
+    width: 2%;
+}
+
+@media screen and (max-width: 600px) {
+    .contactus{
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+    .con_col img{
+        width: 8%;
+    }
+}
+
+
