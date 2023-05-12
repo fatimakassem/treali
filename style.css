@@ -1629,4 +1629,83 @@ color: rgb(34, 104, 58);
   }
   }
 
+.equipss{
+    
+    background-image:linear-gradient(rgba(255, 255, 255, 0.178),rgba(48, 101, 80, 0)),url(images/eqback.jpg);
+    background-position: center;
+    background-size: cover;
+    position:relative;
+  }
+  .inner-equipss{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .inner-equipss h1{
+    text-align: left;
+    margin-bottom: 5%;
+    margin-top: 10%;
+    font-size: 40px;
+  }
+  .inner-equipss p{
+    text-align:left;
+    margin-bottom: 2%;
+    font-size:30px;
+  }
+  .inner-equipss h5{
+    text-align: left;
+    font-size: 25px;
+    line-height: 1.9;
+  }
+
+
+
+  @media screen and (max-width: 600px) {
+
+    .inner-equipss h1{
+        font-size: 20px;
+    }
+    .inner-equipss p{
+        font-size:15px;
+    }
+    .inner-equipss h5{
+        font-size: 15px;
+    }
+
+
+  }
+
+  .backk{
+  
+    min-height: 50vh;
+    width:100%;
+    background-image:linear-gradient(rgba(232, 240, 237, 0),rgba(4, 30, 24, 0)),url(images/eqback3.png);
+    background-position: center;
+    background-size: cover;
+    
+}
+.cntact{
+
+    min-height: 30vh;
+    width:100%;
+    background-image:linear-gradient(rgba(232, 240, 237, 0),rgba(4, 30, 24, 0)),url(images/eqback16.webp);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    margin-bottom: -2%;
+    margin-top: 5%;
+    
+}
+.cntact h1{
+    text-align: center;
+   margin-top: 10%;
+   
+}
+.cntact a{
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: -15%;
+}
+
 
