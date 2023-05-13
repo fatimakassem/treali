@@ -614,6 +614,12 @@ font-size: 25px;
 .inner-client img{
 width: 35%;
 margin-top: 20px;
+overflow: hidden;
+transition: 1s;
+}
+.inner-client img:hover{
+    transform: scale(1.5);
+    cursor: pointer;
 }
 
 
