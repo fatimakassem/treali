@@ -1639,8 +1639,8 @@ color: rgb(34, 104, 58);
   .inner-equipss{
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 15%;
+    margin-bottom: 15%;
   }
   .inner-equipss h1{
     text-align: left;
@@ -1664,13 +1664,13 @@ color: rgb(34, 104, 58);
   @media screen and (max-width: 600px) {
 
     .inner-equipss h1{
-        font-size: 20px;
+        font-size: 25px;
     }
     .inner-equipss p{
         font-size:15px;
     }
     .inner-equipss h5{
-        font-size: 15px;
+        font-size: 20px;
     }
 
 
