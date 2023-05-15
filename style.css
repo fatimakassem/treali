@@ -206,12 +206,16 @@ nav.fa{
 
 
 .registration{
-    width:80%;
+    width:100%;
     margin:auto;
     text-align: center;
     padding-top: 100px;
     margin-top: 25px;
     margin-bottom: 25px;
+    background-image:linear-gradient(rgba(255, 255, 255, 0.884),rgba(48, 101, 80, 0.42)),url(images/copy.jpg);
+     background-position: center;
+     background-size: cover;
+    
 }
 
 
@@ -219,7 +223,8 @@ nav.fa{
     font-size: 25px;
     font-weight: 600;
     color:rgb(20, 10, 54);
-    margin-bottom: 10px;
+    margin-bottom: 15%;
+    margin-top: 5%;
 }
 
 
@@ -228,22 +233,25 @@ nav.fa{
     margin-top: 5%;
     display:flex;
     justify-content: space-between;
+    margin-bottom: 15%;
 }
 .registration_col{
     flex-basis: 31%;
-    background: #4e6e5e91;
+    background: #4e6e5eb1;
     border-radius: 10px;
     margin-bottom: 10%;
     padding:20px 12px;
     box-sizing: border-box;
     margin-right: 5%;
     transition:0.5s;
+    margin-bottom: 15%;
 }
 .registration_col p{
 text-align: left;
 font-weight: 600;
+font-size: 20px;
 margin:10px 0;
-color: #fff;
+color: black;
 }
 .registration_col:hover{
     box-shadow:0 0 20px 0px rgba(0, 0, 0, 0.338);
