@@ -1760,30 +1760,5 @@ color: rgb(34, 104, 58);
 
 
 
-
-.staffs{
-    width:80%;
-    margin:auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
-    background-color: #fff;
-    
-  }
-  .staffs-col{
-    flex-basis:48%;
-    padding:30px 2px;
-  }
-  .staffs-col h1{
-    margin-bottom: 5%;
-    font-size: 25px;
-  }
-  .staffs-col p{
-    margin-bottom: 5%;
-    font-size: 25px;
-  }
-  .staffs-col img{
-    width:100%;
-   
-  }
   
 
