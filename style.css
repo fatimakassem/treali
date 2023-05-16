@@ -1764,6 +1764,45 @@ color: rgb(34, 104, 58);
 }
 
 
+.staffs{
+    width:100%;
+    margin:auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+     
+    background-image:linear-gradient(rgba(255, 255, 255, 0.406),rgba(48, 101, 80, 0)),url(images/eqback.jpg);
+    background-position: center;
+    background-size: cover;
+    
+  }
+  .staffs-col{
+    flex-basis:48%;
+    padding:30px 2px;
+  }
+  .staffs-col h1{
+    margin-bottom: 5%;
+    font-size: 25px;
+    margin-left: 15%;
+  }
+  .staffs-col p{
+    text-align:left;
+    margin-bottom: 2%;
+    font-size:20px;
+    margin-left: 15%;
+  }
+  .staffs-col h5{
 
+    margin-left: 15%;
+    text-align: left;
+    font-size: 25px;
+    line-height: 1.9;
+  }
+  .staffs-col img{
+    width:75%;
+    margin-top: 20%;
+    margin-left: 10%;
+   
+  }
+  
   
 
