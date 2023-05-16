@@ -212,7 +212,7 @@ nav.fa{
     padding-top: 100px;
     margin-top: 25px;
     margin-bottom: 25px;
-    background-image:linear-gradient(rgba(255, 255, 255, 0.884),rgba(166, 219, 198, 0.667)),url(images/copy.jpg);
+    background-image:linear-gradient(rgba(255, 255, 255, 0.884),rgba(164, 201, 186, 0.683)),url(images/copy.jpg);
      background-position: center;
      background-size: cover;
     
@@ -242,7 +242,8 @@ nav.fa{
     margin-bottom: 10%;
     padding:20px 12px;
     box-sizing: border-box;
-    margin-right: 5%;
+     margin-right: 2%;
+    margin-left: 2%;
     transition:0.5s;
     margin-bottom: 15%;
 }
@@ -251,7 +252,7 @@ text-align: left;
 font-weight: 600;
 font-size: 20px;
 margin:10px 0;
-color: black;
+color: #fff;
 }
 .registration_col:hover{
     box-shadow:0 0 20px 0px rgba(0, 0, 0, 0.338);
@@ -1757,4 +1758,32 @@ color: rgb(34, 104, 58);
     }
 }
 
+
+
+
+.staffs{
+    width:80%;
+    margin:auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background-color: #fff;
+    
+  }
+  .staffs-col{
+    flex-basis:48%;
+    padding:30px 2px;
+  }
+  .staffs-col h1{
+    margin-bottom: 5%;
+    font-size: 25px;
+  }
+  .staffs-col p{
+    margin-bottom: 5%;
+    font-size: 25px;
+  }
+  .staffs-col img{
+    width:100%;
+   
+  }
+  
 
