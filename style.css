@@ -446,7 +446,8 @@ padding:30px 0;
     color: #fff;
   }
   .sub-header h1{
-    margin-top: 50px;
+    margin-top: 10%;
+      font-size:15px;
   }
    
   .links{
