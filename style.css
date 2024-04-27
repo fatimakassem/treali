@@ -576,7 +576,6 @@ font-size: 25px;
   }
  .eqq-col img{
     width:100%;
-     margin-bottom:-5%;
   }
 
 
@@ -706,6 +705,10 @@ margin: 0;
 
 
 @media only screen and (max-width: 600px) {
+
+    eqq-col img{
+    margin-bottom: -10%;
+  }
     
     div.inner-we-do{
       font-size: 30px;
