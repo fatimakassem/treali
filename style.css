@@ -566,6 +566,18 @@ font-size: 25px;
 
 
 
+
+ .eqq-col{
+    flex-basis:48%;
+    padding:30px 2px;
+  }
+ .eqq-col img{
+    width:100%;
+  }
+
+
+
+
   .labor{
     width:80%;
     margin:auto;
