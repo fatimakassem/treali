@@ -768,16 +768,14 @@ function showSlides() {
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Public Projects</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f7f9fa;
     }
 
@@ -836,40 +834,73 @@ function showSlides() {
     .modal {
       display: none;
       position: fixed;
-      z-index: 100;
-      left: 0; top: 0;
+      z-index: 999;
+      padding-top: 50px;
+      left: 0;
+      top: 0;
       width: 100%;
       height: 100%;
       overflow: auto;
-      background-color: rgba(0,0,0,0.8);
+      background-color: rgba(0, 0, 0, 0.9);
     }
 
     .modal-content {
+      margin: auto;
+      width: 90%;
+      max-width: 700px;
+      text-align: center;
+      color: white;
       position: relative;
-      margin: 5% auto;
-      max-width: 90%;
-      max-height: 80%;
-      background-color: white;
-      border-radius: 8px;
-      padding: 20px;
-    }
-
-    .modal-content img {
-      width: 100%;
-      max-height: 500px;
-      object-fit: contain;
-      margin-bottom: 15px;
     }
 
     .close {
       position: absolute;
-      top: 15px;
-      right: 25px;
-      color: #000;
-      font-size: 30px;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
       font-weight: bold;
       cursor: pointer;
     }
+
+    .carousel-container {
+      position: relative;
+    }
+
+    #carouselImage {
+      max-width: 100%;
+      max-height: 500px;
+      border-radius: 10px;
+    }
+
+    #carouselCaption {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #f1f1f1;
+    }
+
+    .carousel-btn {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 12px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      border: none;
+      background-color: rgba(0, 0, 0, 0.5);
+      user-select: none;
+      border-radius: 50%;
+    }
+
+    .carousel-btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev { left: 0; }
+    .next { right: 0; }
 
     @media (max-width: 600px) {
       .card {
@@ -885,65 +916,49 @@ function showSlides() {
   <p>Since 2000, Treali Co. has executed over 75 projects across various sectors with excellence and commitment.</p>
 
   <div class="grid">
-    <!-- Cards -->
     <div class="card" onclick="openModal('solar')">
       <img src="images/newimg.jpeg" alt="Solar Projects">
       <div class="card-title">Solar Projects</div>
     </div>
-
     <div class="card" onclick="openModal('reservoirs')">
       <img src="images/majdelyoun.jpg" alt="Reservoirs">
       <div class="card-title">Ground & Elevated Reservoirs</div>
     </div>
-
     <div class="card" onclick="openModal('pumping')">
       <img src="images/qouba.jpg" alt="Pumping Stations">
       <div class="card-title">Pumping Stations</div>
     </div>
-
     <div class="card" onclick="openModal('springs')">
-      <img src="images/water2.jpg" alt="Spring Rehabilitation">
+      <img src="images/water2.jpg" alt="Springs">
       <div class="card-title">Spring Rehabilitation</div>
     </div>
-
     <div class="card" onclick="openModal('stadiums')">
-      <img src="images/zgharta.jpg" alt="Stadiums">
+      <img src="images/zgharta.jpg" alt="Playgrounds">
       <div class="card-title">Rehabilitation of Playgrounds</div>
     </div>
-
     <div class="card" onclick="openModal('roads')">
       <img src="images/street.jpg" alt="Road Construction">
       <div class="card-title">Road Construction</div>
     </div>
-
     <div class="card" onclick="openModal('schools')">
       <img src="images/school.jpg" alt="Schools">
       <div class="card-title">Public Schools Projects</div>
     </div>
-
     <div class="card" onclick="openModal('pipes')">
-      <img src="images/pumpingline350.jpg" alt="Pipelines">
+      <img src="images/pumpingline350.jpg" alt="Pipes">
       <div class="card-title">Pumping & Transmission Lines</div>
     </div>
   </div>
 </div>
 
-<!-- Modal -->
+<!-- Unified Modal -->
 <div id="projectModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
-    <div id="modalImages" style="text-align: center;"></div>
-  </div>
-</div>
-
- <!-- Modal with Carousel -->
-<div id="projectModal" class="modal" style="display:none;">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
     <div class="carousel-container">
       <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
       <div id="carouselImageWrapper">
-        <img id="carouselImage" src="" alt="" />
+        <img id="carouselImage" src="" alt="">
         <p id="carouselCaption"></p>
       </div>
       <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
@@ -951,70 +966,7 @@ function showSlides() {
   </div>
 </div>
 
-<style>
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    padding-top: 50px;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.8);
-  }
-  .modal-content {
-    margin: auto;
-    width: 90%;
-    max-width: 700px;
-    text-align: center;
-    color: white;
-  }
-  .close {
-    position: absolute;
-    top: 20px; right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .carousel-container {
-    position: relative;
-  }
-  #carouselImage {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  #carouselCaption {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #f1f1f1;
-  }
-  .carousel-btn {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 12px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 22px;
-    border: none;
-    background-color: rgba(0,0,0,0.5);
-    user-select: none;
-    border-radius: 50%;
-  }
-  .carousel-btn:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  .prev { left: 0; }
-  .next { right: 0; }
-</style>
-
-
-
-    <script>
+<script>
   const projectImages = {
     solar: [
       { src: "images/newimg.jpeg", desc: "Raskifa Solar Farm, Zgharta – 170 kWp" },
@@ -1028,30 +980,30 @@ function showSlides() {
       { src: "images/ayshiyeh.jpg", desc: "Ground Reservoir – Ayshiyeh" },
       { src: "images/haytoura.jpg", desc: "Ground Reservoir – Haytoura" },
       { src: "images/majdelyoun.jpg", desc: "Ground Reservoir – Majdelyoun" },
-      { src: "images/kfarser.jpg", desc: "Elevated Water Tank – Kfarseer" },
-      { src: "images/kawthareyet el seyed.jpg", desc: "Elevated Water Tank – Kawthareyet el Seyed" }
+      { src: "images/kfarser.jpg", desc: "Elevated Tank – Kfarseer" },
+      { src: "images/kawthareyet el seyed.jpg", desc: "Elevated Tank – Kawthareyet el Seyed" }
     ],
     pumping: [
-      { src: "images/qouba.jpg", desc: "Construction of Qouba Pumping Station" },
-      { src: "images/zawtarps1.jpg", desc: "Construction of Zawtar Pumping Station 1" },
-      { src: "images/zawtarps2.jpg", desc: "Rehabilitation of Zawtar Pumping Station 2" },
-      { src: "images/pumpingsystemhamadani.jpg", desc: "Piping System – Hamadani Reservoirs" }
+      { src: "images/qouba.jpg", desc: "Qouba Pumping Station" },
+      { src: "images/zawtarps1.jpg", desc: "Zawtar Pumping Station 1" },
+      { src: "images/zawtarps2.jpg", desc: "Zawtar Pumping Station 2" },
+      { src: "images/pumpingsystemhamadani.jpg", desc: "Piping System – Hamadani" }
     ],
     springs: [
-      { src: "images/water2.jpg", desc: "Rehabilitation of Aalman Spring" },
-      { src: "images/qbayspring.jpg", desc: "Rehabilitation of Qbay Spring" }
+      { src: "images/water2.jpg", desc: "Aalman Spring" },
+      { src: "images/qbayspring.jpg", desc: "Qbay Spring" }
     ],
     stadiums: [
-      { src: "images/zgharta.jpg", desc: "Rehabilitation of Zgharta Stadium" },
-      { src: "images/ahed.jpg", desc: "Rehabilitation of Ahed Stadium" },
-      { src: "images/fil.jpg", desc: "Rehabilitation of Sin El Fil Stadium" }
+      { src: "images/zgharta.jpg", desc: "Zgharta Stadium" },
+      { src: "images/ahed.jpg", desc: "Ahed Stadium" },
+      { src: "images/fil.jpg", desc: "Sin El Fil Stadium" }
     ],
     roads: [
-      { src: "images/street.jpg", desc: "Construction & Rehabilitation of Roads" },
+      { src: "images/street.jpg", desc: "Road Rehabilitation" },
       { src: "images/canal.jpg", desc: "Waste Water Canal" }
     ],
     schools: [
-      { src: "images/school.jpg", desc: "Construction & Rehabilitation of Public Schools" }
+      { src: "images/school.jpg", desc: "Rehabilitation of Public Schools" }
     ],
     pipes: [
       { src: "images/pumpingline350.jpg", desc: "Pumping Line – 350mm" },
@@ -1079,13 +1031,13 @@ function showSlides() {
   }
 
   function showSlide() {
-    const imageEl = document.getElementById("carouselImage");
-    const captionEl = document.getElementById("carouselCaption");
-    imageEl.src = currentImages[currentIndex].src;
-    captionEl.textContent = currentImages[currentIndex].desc;
+    const img = document.getElementById("carouselImage");
+    const caption = document.getElementById("carouselCaption");
+    img.src = currentImages[currentIndex].src;
+    caption.textContent = currentImages[currentIndex].desc;
   }
 </script>
-    
+
 </body>
 </html>
 
