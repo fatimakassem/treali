@@ -831,45 +831,47 @@ function showSlides() {
     }
 
     /* Modal styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      padding-top: 50px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.9);
-    }
+  .modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
 
-    .modal-content {
-      margin: auto;
-      width: 90%;
-      max-width: 700px;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
+.modal-content {
+  position: relative;
+  margin: auto;
+  width: 90%;
+  max-width: 700px;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
 
-   .close {
+.close {
   position: absolute;
-  top: 15px;
-  right: 25px;
-  font-size: 35px;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
   font-weight: bold;
-  color: #ffffff;
+  color: white;
   background: rgba(255, 255, 255, 0.2);
   padding: 5px 12px;
   border-radius: 50%;
   cursor: pointer;
-  transition: background 0.3s ease;
+  z-index: 1000;
 }
 
 .close:hover {
-  background: rgba(255, 255, 255, 0.5);
-  color: #000;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
 }
 
     .carousel-container {
@@ -960,14 +962,14 @@ function showSlides() {
   </div>
 </div>
 
-<!-- Unified Modal -->
+<!-- Modal with Carousel -->
 <div id="projectModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
     <div class="carousel-container">
       <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
       <div id="carouselImageWrapper">
-        <img id="carouselImage" src="" alt="">
+        <img id="carouselImage" src="" alt="" />
         <p id="carouselCaption"></p>
       </div>
       <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
@@ -1045,6 +1047,14 @@ function showSlides() {
     img.src = currentImages[currentIndex].src;
     caption.textContent = currentImages[currentIndex].desc;
   }
+
+    document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeModal();
+  }
+});
+
+    
 </script>
 
 </body>
