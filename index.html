@@ -936,6 +936,84 @@ function showSlides() {
   </div>
 </div>
 
+ <!-- Modal with Carousel -->
+<div id="projectModal" class="modal" style="display:none;">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <div class="carousel-container">
+      <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
+      <div id="carouselImageWrapper">
+        <img id="carouselImage" src="" alt="" />
+        <p id="carouselCaption"></p>
+      </div>
+      <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 50px;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+  }
+  .modal-content {
+    margin: auto;
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    color: white;
+  }
+  .close {
+    position: absolute;
+    top: 20px; right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .carousel-container {
+    position: relative;
+  }
+  #carouselImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  #carouselCaption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #f1f1f1;
+  }
+  .carousel-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 12px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    border: none;
+    background-color: rgba(0,0,0,0.5);
+    user-select: none;
+    border-radius: 50%;
+  }
+  .carousel-btn:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  .prev { left: 0; }
+  .next { right: 0; }
+</style>
+
+
+
     <script>
   const projectImages = {
     solar: [
@@ -981,31 +1059,33 @@ function showSlides() {
     ]
   };
 
-  function openModal(category) {
-    const modal = document.getElementById("projectModal");
-    const modalImages = document.getElementById("modalImages");
-    modalImages.innerHTML = "";
-    projectImages[category].forEach(item => {
-      const img = document.createElement("img");
-      img.src = item.src;
-      img.style.marginBottom = "5px";
-      modalImages.appendChild(img);
+  let currentImages = [];
+  let currentIndex = 0;
 
-      const caption = document.createElement("p");
-      caption.textContent = item.desc;
-      caption.style.fontSize = "1em";
-      caption.style.marginBottom = "25px";
-      caption.style.color = "#333";
-      modalImages.appendChild(caption);
-    });
-    modal.style.display = "block";
+  function openModal(category) {
+    currentImages = projectImages[category];
+    currentIndex = 0;
+    showSlide();
+    document.getElementById("projectModal").style.display = "block";
   }
 
   function closeModal() {
     document.getElementById("projectModal").style.display = "none";
   }
-</script>
 
+  function changeSlide(n) {
+    currentIndex = (currentIndex + n + currentImages.length) % currentImages.length;
+    showSlide();
+  }
+
+  function showSlide() {
+    const imageEl = document.getElementById("carouselImage");
+    const captionEl = document.getElementById("carouselCaption");
+    imageEl.src = currentImages[currentIndex].src;
+    captionEl.textContent = currentImages[currentIndex].desc;
+  }
+</script>
+    
 </body>
 </html>
 
