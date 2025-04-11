@@ -764,29 +764,25 @@ function showSlides() {
 
 
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Public Projects | Trealico</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: #f7f9f8;
+      color: #222;
     }
 
     .projects-section {
       padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
+      max-width: 1300px;
+      margin: 0 auto;
     }
 
     .projects-section h2 {
@@ -797,72 +793,55 @@ function showSlides() {
 
     .projects-section p {
       text-align: center;
-      font-size: 1.1rem;
-      color: #666;
-      max-width: 700px;
-      margin: 0 auto 40px;
+      font-size: 1rem;
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .projects-grid {
+    .project-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
     }
 
     .project-card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      background-color: #fff;
+      border-radius: 10px;
       overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      transition: transform 0.3s ease;
     }
 
     .project-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
     }
 
     .project-card img {
       width: 100%;
       height: 200px;
       object-fit: cover;
-      display: block;
     }
 
     .project-info {
-      padding: 16px 20px;
+      padding: 15px;
     }
 
-    .project-info h3 {
-      font-size: 1.2rem;
-      margin: 0 0 6px;
+    .project-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 5px;
     }
 
-    .project-info p {
-      font-size: 0.95rem;
-      color: #666;
-      margin: 0;
-    }
+    @media (max-width: 600px) {
+      .projects-section h2 {
+        font-size: 2rem;
+      }
 
-    .btn-container {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      background-color: #3c8074;
-      color: white;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #2e6159;
+      .project-card img {
+        height: 180px;
+      }
     }
   </style>
 </head>
@@ -870,80 +849,198 @@ function showSlides() {
 
   <section class="projects-section" id="public-projects">
     <h2>Public Projects</h2>
-    <p>Since 2000, Treali Co. For Trading and Contracting has successfully executed more than 75 projects, with contract values ranging from hundreds of thousands to millions of US dollars.</p>
+    <p>Since 2000, Treali Co. For Trading and Contracting has successfully executed more than 75 projects of contract values ranging from hundreds of thousands to millions of US Dollars:</p>
 
-    <div class="projects-grid">
-      <!-- Sample Card -->
+    <div class="project-grid">
+      <!-- Project Cards -->
       <div class="project-card">
         <img src="images/newimg.jpeg" alt="Raskifa Solar Farm">
         <div class="project-info">
-          <h3>Raskifa Solar Farm</h3>
-          <p>Zgharta – 170 kWp</p>
+          <div class="project-title">Raskifa Solar Farm, Zgharta – 170 kwp</div>
         </div>
       </div>
 
       <div class="project-card">
         <img src="images/img50.jpeg" alt="Wadi El Jamous Solar Farm">
         <div class="project-info">
-          <h3>Wadi El Jamous Solar Farm</h3>
-          <p>333 kWp</p>
+          <div class="project-title">Wadi El Jamous Solar Farm – 333 kwp</div>
         </div>
       </div>
 
       <div class="project-card">
         <img src="images/newsolar.jpeg" alt="Minyara Solar Pumping">
         <div class="project-info">
-          <h3>Minyara Solar Pumping</h3>
-          <p>Akkar – 139.3 kWp</p>
+          <div class="project-title">Minyara Solar Pumping, Akkar – 139.3 kwp</div>
         </div>
       </div>
 
       <div class="project-card">
-        <img src="images/water2.jpg" alt="Rehabilitation of Aalman Spring">
+        <img src="images/solar.jpg" alt="Yater solar pumping">
         <div class="project-info">
-          <h3>Rehabilitation of Aalman Spring</h3>
-          <p>Water Project</p>
+          <div class="project-title">Yater Solar Pumping – 120 kwp</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/water2.jpg" alt="Aalman Spring">
+        <div class="project-info">
+          <div class="project-title">Rehabilitation of Aalman Spring</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/qbayspring.jpg" alt="Qbay Spring">
+        <div class="project-info">
+          <div class="project-title">Rehabilitation of Qbay Spring</div>
         </div>
       </div>
 
       <div class="project-card">
         <img src="images/projectimage3.jpg" alt="El Buss Treatment Plant">
         <div class="project-info">
-          <h3>El Buss Treatment Plant</h3>
-          <p>Rehabilitation and Pumping</p>
+          <div class="project-title">Rehabilitation of El Buss Treatment Plant</div>
         </div>
       </div>
 
       <div class="project-card">
-        <img src="images/school.jpg" alt="School Construction">
+        <img src="images/qouba.jpg" alt="Qouba Pumping Station">
         <div class="project-info">
-          <h3>Public Schools</h3>
-          <p>Construction & Rehabilitation</p>
+          <div class="project-title">Construction of Qouba Pumping Station</div>
         </div>
       </div>
 
       <div class="project-card">
-        <img src="images/street.jpg" alt="Lateral Roads">
+        <img src="images/zawtarps1.jpg" alt="Zawtar PS1">
         <div class="project-info">
-          <h3>Lateral and Major Roads</h3>
-          <p>Construction & Rehabilitation</p>
+          <div class="project-title">Construction of Zawtar Pumping Station 1</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/zawtarps2.jpg" alt="Zawtar PS2">
+        <div class="project-info">
+          <div class="project-title">Rehabilitation of Zawtar Pumping Station 2</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/projectimage9.jpg" alt="Hamadani Reservoirs">
+        <div class="project-info">
+          <div class="project-title">Commissioning of Hamadani Reservoirs</div>
         </div>
       </div>
 
       <div class="project-card">
         <img src="images/zgharta.jpg" alt="Zgharta Stadium">
         <div class="project-info">
-          <h3>Zgharta Stadium</h3>
-          <p>Rehabilitation</p>
+          <div class="project-title">Rehabilitation of Zgharta Stadium</div>
         </div>
       </div>
 
-      <!-- Add more project cards below using the same format -->
+      <div class="project-card">
+        <img src="images/ahed.jpg" alt="Ahed Stadium">
+        <div class="project-info">
+          <div class="project-title">Rehabilitation of Ahed Stadium</div>
+        </div>
+      </div>
 
-    </div>
+      <div class="project-card">
+        <img src="images/fil.jpg" alt="Sin El Fil Stadium">
+        <div class="project-info">
+          <div class="project-title">Rehabilitation of Sin El Fil Stadium</div>
+        </div>
+      </div>
 
-    <div class="btn-container">
-      <a href="projects.html" class="btn">Explore More</a>
+      <div class="project-card">
+        <img src="images/school.jpg" alt="Schools">
+        <div class="project-info">
+          <div class="project-title">Construction & Rehabilitation of Public Schools</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/street.jpg" alt="Roads">
+        <div class="project-info">
+          <div class="project-title">Construction & Rehabilitation of Roads</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/canal.jpg" alt="Waste Water Canal">
+        <div class="project-info">
+          <div class="project-title">Waste Water Canal</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/ground.jpg" alt="Houmine el Fawqa">
+        <div class="project-info">
+          <div class="project-title">Ground Reservoir in Houmine el Fawqa</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/aramoun.jpg" alt="Aramoun Haut">
+        <div class="project-info">
+          <div class="project-title">Ground Reservoir in Aramoun Haut</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/ayshiyeh.jpg" alt="Ayshiyeh">
+        <div class="project-info">
+          <div class="project-title">Ground Reservoir in Ayshiyeh</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/haytoura.jpg" alt="Haytoura">
+        <div class="project-info">
+          <div class="project-title">Ground Reservoir in Haytoura</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/majdelyoun.jpg" alt="Majdelyoun">
+        <div class="project-info">
+          <div class="project-title">Ground Reservoir in Majdelyoun</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/pumpingsystemhamadani.jpg" alt="Hamadani System">
+        <div class="project-info">
+          <div class="project-title">Piping System – Hamadani Reservoirs</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/pumpingline350.jpg" alt="Pumping Line 350mm">
+        <div class="project-info">
+          <div class="project-title">Pumping Line – 350 mm</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/transmissionline350.jpg" alt="Transmission Line 150mm">
+        <div class="project-info">
+          <div class="project-title">Transmission Line – 150 mm</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/kfarser.jpg" alt="Kfarseer Water Tank">
+        <div class="project-info">
+          <div class="project-title">Elevated Water Tank in Kfarseer</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/kawthareyet el seyed.jpg" alt="Kawthareyet Water Tank">
+        <div class="project-info">
+          <div class="project-title">Elevated Water Tank in Kawthareyet el Seyed</div>
+        </div>
+      </div>
     </div>
   </section>
 
