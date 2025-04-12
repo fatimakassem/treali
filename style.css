@@ -264,36 +264,52 @@ html,body{
 
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/your-image.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('https://images.unsplash.com/photo-1584270354949-1b9a3b8ecb09') no-repeat center center/cover;
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: #fff;
+  align-items: center;
   text-align: center;
+  color: white;
   padding: 0 20px;
 }
 
 .hero-content h1 {
-  font-size: 3em;
+  font-size: 3rem;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .hero-content p {
-  font-size: 1.2em;
+  font-size: 1.25rem;
   margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.btn {
+.hero-btn {
   background-color: #548473;
   color: white;
   padding: 12px 25px;
-  text-decoration: none;
   border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
   transition: background 0.3s ease;
 }
 
-.btn:hover {
+.hero-btn:hover {
   background-color: #406457;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
 }
 
 
