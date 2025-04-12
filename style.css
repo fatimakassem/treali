@@ -177,6 +177,59 @@
   z-index: 1000;
 }
 
+
+.header {
+  position: relative;
+  height: 100vh;
+  background: url('images/your-hero-bg.jpg') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 1;
+}
+
+.text-box {
+  position: relative;
+  z-index: 2;
+}
+
+.text-box h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.text-box p {
+  font-size: 1.2rem;
+  font-weight: 300;
+
+   .hero-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #548473;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #3a5f52;
+}
 .container {
   width: 90%;
   max-width: 1200px;
