@@ -13,10 +13,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TREALICO</title>
     
-    <meta name="keywords" content="trading","contracting","trealico","treali","trealico for trading and contracting" />
     <meta name="description" content="trealico for trading and contracting"/>
-
- 
   <!-- مكتبات CSS -->
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -24,11 +21,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="images/logo.jpg">
-
   <!-- مكتبات JS -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script>
   window.onload = function () {
     AOS.init({
@@ -37,13 +32,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     });
   };
 </script>
-
-
-  
-
 </head>
 <body>
-    
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXPBJ6B"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -70,12 +60,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
   </div>
 </header>
-
-
-
-
-
-
     <section class="hero">
   <div class="hero-content">
     <h1>Welcome to Trealico</h1>
@@ -83,41 +67,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#projects" class="btn">View Projects</a>
   </div>
 </section>
-
-
-    
-
             <div class="main-we-do">
                 <div class="inner-we-do">
-                    
                     <p>Treali Co. For Trading and contracting is a limited partnership company founded in year 2000 between three brothers Ali, Hassan and Hamid Hattab.
                         In 2020, the management of the company moved to the second generation of Hattab family, Treali Co. is currently managed by two cousins holding Engineering degrees from the UK and France. Mohamad H. El Hattab, holder of Ph.D. in Sustainable Civil Engineering from Imperial College London, UK  and Mohamad M. El Hattab holder of Masters degree in Civil Engineering from HEI, Lille, France.
-                         
                         </p>
-                   
                 </div>
-            </div>
-        
-
-
-
-
-
-
-
-
-          
-
-
-
-
-
-
-
 <section class="about" id="about">
-        
-    
-        
     <div class="about_col">
         <img src="images/pencil.png">
        <p>OUR MISSION<br></p>
@@ -143,26 +99,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             •	<span style="color: rgb(84, 132, 115);">Quality and Result Oriented:</span> We constantly measure our performance against benchmarks and KPIs to ensure that our service delivery is efficient, efficacious and represents the best value-for-money proposition.<br>
             •	<span style="color: rgb(84, 132, 115);">Cohesion:</span> Whatever the objective and whatever the result, these must be obtained with the contribution of all business units. The vitality of the Group that emerges is the result of horizontal management styles that place the emphasis on leveraging the collective skillset and wisdom of all Group employees.<br>
             </h5></div>
-     
         </div>
-    
 </div>
 </section>
-
 <section class="cntact">
-    
 </section>
-
-
-
-
-
-
-
-
-
-
-
 <section class="services" id="services">
   <div class="our-services">
     <h1>Our <span>Services</span></h1>
@@ -210,18 +151,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
-
 <section class="projsection" id="public">
   <h2>Public Projects</h2>
   <p>Since 2000, Treali Co. has executed over 75 projects across various sectors with excellence and commitment.</p>
-
   <div class="grid">
     <div class="card" onclick="openModal('solar')">
       <img src="images/newimg.jpeg" alt="Solar Projects">
@@ -257,7 +189,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-
 <!-- Modal with Carousel -->
 <div id="projectModal" class="modal">
   <div class="modal-content">
@@ -272,7 +203,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </div>
-
 <script>
   const projectImages = {
     solar: [
@@ -317,57 +247,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       { src: "images/transmissionline350.jpg", desc: "Transmission Line – 150mm" }
     ]
   };
-
   let currentImages = [];
   let currentIndex = 0;
-
   function openModal(category) {
     currentImages = projectImages[category];
     currentIndex = 0;
     showSlide();
     document.getElementById("projectModal").style.display = "block";
   }
-
   function closeModal() {
     document.getElementById("projectModal").style.display = "none";
   }
-
   function changeSlide(n) {
     currentIndex = (currentIndex + n + currentImages.length) % currentImages.length;
     showSlide();
   }
-
   function showSlide() {
     const img = document.getElementById("carouselImage");
     const caption = document.getElementById("carouselCaption");
     img.src = currentImages[currentIndex].src;
     caption.textContent = currentImages[currentIndex].desc;
   }
-
     document.addEventListener("keydown", function(event) {
   if (event.key === "Escape") {
     closeModal();
   }
 });
-
-    
 </script>
-
-  
-
-
-
-
-    
-
-
-
-
-
 <section class="registration">
-    
     <h1>REGISTRATION CERTIFICATES</h1>
-
     <div class="row">
         <div class="registration_col">
            <p>Commercial Registration<br>
@@ -385,15 +293,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
             <section class="staff">
         <div class="row">
             <div class="staff-col">
@@ -409,173 +308,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <img src="images/chart.png">
             </div>
         </div>
-        
      </section>
 
 
 
 
-
-
-
-
-
-
-   
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-<!---<section class="projects">
-    <h1>Our Projects</h1>
-    <p>Since 2000, Treali Co. For Trading and contracting has successfully executed over 75 projects of contract values ranging from hundreds of thousands to millions of US Dollars in the following fields:</p>
-
-    <div class="row">
-        <div class="projects-col">
-            <img src="images/proj1.jpeg">
-            <div class="layer">
-                <h3>Elevated Water Tanks</h3>
-            </div>
-        </div>
-        <div class="projects-col">
-            <img src="images/projectimage2.jpg">
-            <div class="layer">
-                <h3>Ground Water Reservoirs</h3>
-            </div>
-        </div>
-        <div class="projects-col">
-            <img src="images/projectimage8.jpg">
-            <div class="layer">
-                <h3>Water Networks</h3>
-            </div>
-        </div>
-        <div class="projects-col">
-            <img src="images/projectimage9.jpg">
-            <div class="layer">
-                <h3>Wastewater Networks</h3>
-            </div>
-        </div>
-        <div class="projects-col">
-            <img src="images/projectimage7.jpg">
-            <div class="layer">
-                <h3>Pumping stations</h3>
-            </div>
-        </div>
-        <div class="projects-col">
-            <img src="images/proj6.jpeg">
-            <div class="layer">
-                <h3>Public Schools</h3>
-            </div>
-        </div>
-        <div class="projects-col">
-            <img src="images/projectimage12.jpg">
-            <div class="layer">
-                <h3>Playgrounds</h3>
-            </div>
-        </div>
-        <div class="projects-col">
-            <img src="images/proj8.jpeg">
-            <div class="layer">
-                <h3>Hangars and warehouses </h3>
-            </div>
-        </div>
-        <div class="projects-col">
-            <img src="images/projectimage4.jpg">
-            <div class="layer">
-                <h3>Shoring systems </h3>
-            </div>
-        </div>
-        
-    </div>
-    <a href="projects.html" class="btn">Explore More</a>
-</section>--->
-
-
-
-<!--<section class="equipments">
-    <h1>Our Equipments</h1>
-    <p>Treali Co. For Trading and contracting owns more than 20 units of heavy construction equipment including: </p>
-    <div class="row">
-        <div class="equipments-col">
-            <img src="images/eq1.jpg">
-            <h3>Crawler excavator</h3>
-        </div>
-        <div class="equipments-col">
-            <img src="images/eq2.jpg">
-            <h3>Backhoe Loader</h3>
-        </div>
-        <div class="equipments-col">
-            <img src="images/eq3.jpg">
-            <h3>concrete mixer</h3>
-        </div>
-        <div class="equipments-col">
-            <img src="images/eq4.jpg">
-            <h3>asphalt cutter</h3>
-        </div>
-    </div>
-</section>
-
--->
-
-
-
-
-
-
-<!----
-
-<section class="equips">
-    <div class="our-equips">
-       <h1>Our <span>Equipments</span></h1>
-       <h5>Treali Co. For Trading and contracting owns more than 20 units of heavy construction equipment including:</h4>
-       <div class="main-equip">
-           
-   
-       <div class="inner-equip">
-           <img src="images/eq1.jpg" alt="">
-       </div>
-   
-       
-   
-       <div class="inner-equip">
-           <img src="images/eq3.jpg" alt="">
-       </div>
-       
-       <div class="inner-equip">
-           <img src="images/eq4.jpg" alt="">
-       </div>
-
-       <div class="inner-equip">
-        <img src="images/eq1.jpg" alt="">
-    </div>
-
-    <div class="inner-equip">
-        <img src="images/eq3.jpg" alt="">
-    </div>
-   </div>
-   </section>
-
-
---->
-
-
-  
+     
  <section class="staffs" id="equipment">
     <div class="row">
         <div class="staffs-col">
@@ -594,23 +332,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img src="images/eqq.jpg">
         </div>
     </div>
-    
  </section>
-
-
-
-
-
-   
-
-
-
-
-
-
-
  <section class="big">
-
 <section class="staff">
     <div class="row">
         <div class="staff-col">
@@ -619,8 +342,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Over 5 engineers with Masters and/or Bachelors degrees,<br>
                 Over 5 administrative staff with university degrees,<br>
                 Over 8 technicians & skilled staff with diplomas from technical institutes.
-                
-                
                 </p>
         </div>
         <div class="staff-col">
@@ -629,17 +350,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <a href="images/organisationChart.png" class="hero-btn">Organisation Chart</a>
  </section>
-
-
-
-
- 
-
- 
-
-
-
-
  <section class="labor">
     <div class="row">
         <div class="labor-col">
@@ -650,35 +360,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>Treali Co. For Trading and contracting normally employs a varying number of laborers (30 - 80) whose actual number is dependent on the nature, size and number of active projects at any particular time.
                 </p>
         </div>
-        
     </div>
  </section>
-
  </section>
-      
-      
-      
-      
-
 <section class="clients" id="clients">
  <div class="our-clients">
     <h1>Our <span>Clients</span></h1>
     <h5>Some of the main clients that Treali Co. has worked with since year 2000:</h5>
     <div class="main-client">
-        
-
     <div class="inner-client">
         <img src="images/unicef.jpg" alt="">
     </div>
-
     <div class="inner-client">
         <img src="images/fifa.jpg" alt="">
     </div>
-
     <div class="inner-client">
         <img src="images/sheild.jpg" alt="">
     </div>
-    
     <div class="inner-client">
         <img src="images/meyah.jpg" alt="">
     </div>
@@ -693,24 +391,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <section class="contactus" id="contact">
     <h3>Contact Us</h3>
     <div class="conrow">
@@ -718,29 +398,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img src="images/home.jpg">
             <h5>ADDRESS</h5>
            <p>Nabatieh , Choukine , Main Road , Own bldg.<br>Beirut,Zekak el Blat,Al Dar el Baydaa Bldng.,1st Floor</p>
-          
         </div>
         <div class="con_col">
             <img src="images/phone.jpg">
             <h5>PHONE</h5>
             <p>07. 762 714 / 01. 371 262<br></p>
-           
          </div>
          <div class="con_col">
             <img src="images/email.jpg">
             <h5>EMAIL</h5>
             <p>trealico@gmail.com<br></p>
-           
          </div>
-
-    
     </div>
 </section>
-
-
-
-
-
 <section class="touch">
     <div class="container">
         <div style="text-align:center">
@@ -755,7 +425,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <form action="/action_page.php">
               <label for="fname">Your Name</label>
               <input type="text" id="fname" name="firstname" placeholder="Your name..">
-              
               <label for="subject">Your Comment</label>
               <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
               <input type="button" value="Submit" href="">
@@ -764,33 +433,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 </section>
-
-
 <section class="backk"></section>
-
-
-
 <section class="footer">
     <h4>About Us</h4>
     <p>The main office of Treali is located in Nabatieh.<br>This office hostes the administrative and technical teams responsible to deliver projects across Lebanon.
-
     </p>
     <div class="icons">
         <img src="images/facebook.jpg">
         <img src="images/twitter.jpg">
         <img src="images/linkedin.jpg">
-       
     </div>
     <div class="last">
     <p>Copyright &copy; 2024 All rights reserved by Fatima Kassem.</p></div>
 </section> 
-
-
-
-
 <a href="#" class="top"><img src="images/arrow.png" ></a>
-
-
-
 </body>
 </html>
