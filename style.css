@@ -324,40 +324,59 @@ html,body{
 
 
 
-.main-we-do{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    
+.main-we-do {
+  background-color: #f5f5f5;
+  padding: 80px 20px;
+  text-align: center;
 }
-.inner-we-do{
-    flex: 1 1 45rem;
-    background-color: #4e6e5e91;
-    
+
+.main-we-do .container {
+  max-width: 1000px;
+  margin: 0 auto;
 }
-.inner-we-do h1{
-    color:rgb(20, 10, 54);
-    font-size: 30px;
-    align-items: center;
-    justify-content: center;
+
+.main-we-do h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 700;
+  position: relative;
 }
-.inner-we-do p{
-    color:#fff;
-    font-size: 25px;
-    padding: 1rem 0;
-    margin-bottom: 25px;
-    text-align: left;
-    margin-right: 2%;
-    margin-left: 2%;
+
+.main-we-do h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #548473;
+  margin: 15px auto 30px;
+  border-radius: 5px;
 }
-.inner-we-do a{
-    padding: 2rem 4rem;
-    background:#a2c3ef;
-    color:black;
-    font-size: 1.5rem;
-    border-radius: 15px;
+
+.main-we-do p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-we-do h2 {
+    font-size: 2rem;
+  }
+
+  .main-we-do p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+
+
+
+
 
 
 .registration{
