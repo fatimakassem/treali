@@ -265,7 +265,7 @@ html,body{
 .hero {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('images/lastback.jepg') no-repeat center center/cover;
+    url('images/lastback.jpeg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
