@@ -1,7 +1,8 @@
-
-   * { box-sizing: border-box; }
+* { box-sizing: border-box; }
 
     body {
+  overflow-x: hidden;
+  overflow-y: auto;
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       
@@ -175,7 +176,7 @@ html,body{
   z-index: 1000;
 }
 
-.container {
+.touch-container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
@@ -263,6 +264,8 @@ html,body{
 
 
 .hero {
+  min-height: 100vh;
+  height: auto;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url('images/lastback.jpeg') no-repeat center center/cover;
@@ -330,7 +333,7 @@ html,body{
   text-align: center;
 }
 
-.main-we-do .container {
+.main-we-do .touch-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
@@ -915,7 +918,7 @@ margin: 0;
 
 .services {
   padding: 4rem 1rem;
-  background: ##f5f5f5;
+  background: #f5f5f5;
   text-align: center;
 }
 
@@ -1278,7 +1281,7 @@ color: rgb(34, 104, 58);
   }
   
   /* Style the container/contact section */
-  .container {
+  .touch-container {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 10px;
@@ -1525,6 +1528,8 @@ color: rgb(34, 104, 58);
   /* remove the below if you don't want smooth scrolling */
   html,
   body {
+  overflow-x: hidden;
+  overflow-y: auto;
     scroll-behavior: smooth;
   }
 @media only screen and (max-width: 600px) {
