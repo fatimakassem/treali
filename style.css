@@ -359,13 +359,14 @@ html,body{
 
 
 .main-we-do {
-  margin: 10%;
+ 
   background-color: #f5f5f5;
   padding: 40px 20px;    /* Reduced overall padding */
 }
 
 /* Flex container */
 .mw-row {
+   margin: 10%;
   display: flex;
   align-items: flex-start; /* ensures heading and paragraph top-align */
   gap: 20px;               /* less gap between columns */
