@@ -1964,105 +1964,156 @@ margin-top: 40px;
 
 
 
-/* Turnover Section Overall */
-.turnover {
-  background-color: #ffffff;
+
+
+
+/* Turnover Timeline Section */
+.turnover-timeline {
+  background-color: #fff;
   padding: 60px 20px;
   text-align: center;
-  overflow: hidden;
-}
-
-.turnover-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-/* Section Title */
-.turnover h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #2c3e50;
   position: relative;
 }
-.turnover h2::after {
+
+.tt-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Title with Underline */
+.turnover-timeline h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  position: relative;
+}
+.turnover-timeline h2::after {
   content: "";
   display: block;
   width: 80px;
   height: 4px;
   background-color: #548473;
-  margin: 10px auto;
+  margin: 15px auto 0;
   border-radius: 2px;
 }
 
-/* Layout: Two columns on desktop */
-.turnover-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  align-items: center;
+/* Timeline Container */
+.timeline {
+  position: relative;
+  margin: 40px 0;
+  padding: 0 20px;
 }
 
-/* Left Column: Turnover Chart */
-.turnover-chart {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.year {
-  background: #f2f7f6;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  transition: transform 0.3s;
-}
-.year:hover {
-  transform: translateY(-5px);
-}
-.year .value {
-  display: block;
-  font-size: 2.5rem;
-  color: #548473;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.year .year-label {
-  font-size: 1rem;
-  color: #333;
+/* Vertical line in the center */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: #e0e0e0;
+  transform: translateX(-50%);
 }
 
-/* Right Column: Description */
-.turnover-desc {
-  flex: 1;
-  padding: 20px;
+/* Timeline items */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+/* Alternate sides for items on large screens */
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+.timeline-item:nth-child(even) {
+  left: 50%;
   text-align: left;
 }
-.turnover-desc p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #444;
-  margin: 0;
+
+/* Markers */
+.timeline-item .marker {
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: #548473;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.timeline-item:nth-child(odd) .marker {
+  right: -10px;
+}
+.timeline-item:nth-child(even) .marker {
+  left: -10px;
 }
 
-/* Responsive: Stack columns on small screens */
+/* Info Box */
+.timeline-item .info {
+  background: #f2f7f6;
+  display: inline-block;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+/* Styling for year, value, and unit */
+.timeline-item .year {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.timeline-item .value {
+  display: block;
+  font-size: 2.2rem;
+  color: #548473;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.timeline-item .unit {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Description below timeline */
+.tt-description {
+  max-width: 800px;
+  margin: 40px auto 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Responsive: On mobile, stack items centrally */
 @media (max-width: 768px) {
-  .turnover-content {
-    flex-direction: column;
-    gap: 20px;
+  .timeline::before {
+    left: 20px;
   }
-  .turnover-desc {
-    text-align: center;
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    text-align: left;
+    left: 0 !important;
   }
-  .turnover h2 {
-    font-size: 2rem;
-  }
-  .turnover-desc p {
-    font-size: 1rem;
+  .timeline-item .marker {
+    left: 10px !important;
+    right: auto;
   }
 }
+
+
 
 
 
