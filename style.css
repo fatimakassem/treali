@@ -1849,3 +1849,82 @@ color: rgb(34, 104, 58);
       }
     }
   
+
+
+
+/* === Fix menu icon position under logo on small screens === */
+@media (max-width: 768px) {
+  .main-header {
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  #menu-toggle:checked ~ .main-nav {
+    display: flex;
+  }
+}
+
+
+
+/* === Center the .main-we-do paragraph on mobile === */
+.main-we-do {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.main-we-do p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* === Center about section icons on larger screens === */
+.about_col img {
+  display: block;
+  margin: 0 auto 15px;
+  max-width: 100px;
+}
+
+/* === Fix AOS animation visibility for services === */
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Re-add fade-up animation style manually if AOS is missing or not initializing */
+.services_col[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s forwards;
+  animation-delay: var(--aos-delay, 0ms);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  
