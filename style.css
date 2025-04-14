@@ -348,8 +348,7 @@ html,body{
   padding: 70px 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  text-align: left;
 }
 
 .mw-wrapper {
@@ -394,6 +393,7 @@ html,body{
   .main-we-do p {
     font-size: 1rem;
     line-height: 1.7;
+    align-items: center;
   }
 }
 
@@ -1162,9 +1162,7 @@ margin-top: 40px;
   display: flex;            /* To center the video in column if you want */
   align-items: center;
   justify-content: center;
-  background: #fff;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  
 }
 
 .project-video video {
@@ -1184,6 +1182,8 @@ margin-top: 40px;
 
   .project-desc, .project-video {
     margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
   }
 
   .project-desc, .project-video {
