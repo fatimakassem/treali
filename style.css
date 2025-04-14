@@ -55,7 +55,7 @@ html,body{
 }
 
 /* Optional underline styling */
- .projsection p::after {
+ .projsection h2::after {
   content: "";
   display: block;
   width: 80px;
