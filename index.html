@@ -357,38 +357,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-    <section class="turnover" id="turnover">
-  <div class="turnover-container">
+    <section class="turnover-timeline" id="turnover">
+  <div class="tt-container">
     <h2>Annual Turnover</h2>
-    <div class="turnover-content">
-      <!-- Left Column: Turnover Chart -->
-      <div class="turnover-chart">
-        <div class="year">
-          <span class="value" data-target="4.70">0.00</span>
-          <p class="year-label">2021</p>
-        </div>
-        <div class="year">
-          <span class="value" data-target="9.17">0.00</span>
-          <p class="year-label">2020</p>
-        </div>
-        <div class="year">
-          <span class="value" data-target="12.24">0.00</span>
-          <p class="year-label">2019</p>
-        </div>
-        <div class="year">
-          <span class="value" data-target="8.56">0.00</span>
-          <p class="year-label">2018</p>
+    <div class="timeline">
+      <!-- Timeline marker for 2021 -->
+      <div class="timeline-item" data-year="2021" data-target="4.70">
+        <div class="marker"></div>
+        <div class="info">
+          <span class="year">2021</span>
+          <span class="value">0.00</span>
+          <span class="unit">Million USD</span>
         </div>
       </div>
-      <!-- Right Column: Description -->
-      <div class="turnover-desc">
-        <p>
-          Over the past few years, Treali Co. has grown its annual turnover steadily, 
-          reflecting our unwavering commitment to quality, innovation, and sustainable construction practices. 
-          Each milestone represents not just a figure, but our journey toward excellence.
-        </p>
+      <!-- Timeline marker for 2020 -->
+      <div class="timeline-item" data-year="2020" data-target="9.17">
+        <div class="marker"></div>
+        <div class="info">
+          <span class="year">2020</span>
+          <span class="value">0.00</span>
+          <span class="unit">Million USD</span>
+        </div>
+      </div>
+      <!-- Timeline marker for 2019 -->
+      <div class="timeline-item" data-year="2019" data-target="12.24">
+        <div class="marker"></div>
+        <div class="info">
+          <span class="year">2019</span>
+          <span class="value">0.00</span>
+          <span class="unit">Million USD</span>
+        </div>
+      </div>
+      <!-- Timeline marker for 2018 -->
+      <div class="timeline-item" data-year="2018" data-target="8.56">
+        <div class="marker"></div>
+        <div class="info">
+          <span class="year">2018</span>
+          <span class="value">0.00</span>
+          <span class="unit">Million USD</span>
+        </div>
       </div>
     </div>
+    <p class="tt-description">
+      Our steadily growing turnover reflects our commitment to quality,
+      innovation, and sustainable construction. Each milestone is not merely a number,
+      but a testament to our journey towards excellence.
+    </p>
   </div>
 </section>
     
@@ -554,32 +568,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-    <script>
+   <script>
   document.addEventListener("DOMContentLoaded", function() {
-    const counters = document.querySelectorAll(".turnover-chart .year .value");
-    const animationDuration = 2000; // Animation duration in milliseconds
+    const items = document.querySelectorAll(".timeline-item");
+    
+    items.forEach(item => {
+      const valueEl = item.querySelector(".value");
+      const target = parseFloat(item.getAttribute("data-target") || valueEl.getAttribute("data-target"));
+      
+      if (!target) return;
 
-    counters.forEach(counter => {
-      const target = parseFloat(counter.getAttribute("data-target"));
       let start = 0;
-      const stepTime = 50; // update every 50ms
-      const increment = target / (animationDuration / stepTime);
-
-      const updateCounter = () => {
+      const duration = 2000; // 2 seconds
+      const stepTime = 50;
+      const increment = target / (duration / stepTime);
+      
+      function updateNumber() {
         start += increment;
         if (start < target) {
-          counter.innerText = start.toFixed(2);
-          setTimeout(updateCounter, stepTime);
+          valueEl.innerText = start.toFixed(2);
+          setTimeout(updateNumber, stepTime);
         } else {
-          counter.innerText = target.toFixed(2);
+          valueEl.innerText = target.toFixed(2);
         }
-      };
-
-      updateCounter();
+      }
+      updateNumber();
     });
   });
 </script>
-
 
     
     
