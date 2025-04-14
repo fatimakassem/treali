@@ -1927,4 +1927,38 @@ color: rgb(34, 104, 58);
   }
 }
 
-  
+
+
+/* === Only adjust main-we-do for mobile === */
+@media (max-width: 768px) {
+  .main-we-do {
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .main-we-do p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+/* === Align header nav links to the right on large screens === */
+@media (min-width: 769px) {
+  .main-nav ul {
+    margin-left: auto;
+  }
+}
+
+/* === AOS animation fallback improved === */
+.services_col[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+body.aos-animate .services_col[data-aos="fade-up"] {
+  opacity: 1;
+  transform: translateY(0);
+}
