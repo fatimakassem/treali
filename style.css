@@ -1884,19 +1884,7 @@ color: rgb(34, 104, 58);
 
 
 
-/* === Center the .main-we-do paragraph on mobile === */
-.main-we-do {
-  text-align: center;
-  padding: 40px 20px;
-}
 
-.main-we-do p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #333;
-}
 
 /* === Center about section icons on larger screens === */
 .about_col img {
@@ -1927,20 +1915,6 @@ color: rgb(34, 104, 58);
 
 
 
-/* === Only adjust main-we-do for mobile === */
-@media (max-width: 768px) {
-  .main-we-do {
-    text-align: center;
-    padding: 30px 15px;
-  }
-
-  .main-we-do p {
-    font-size: 1em;
-    line-height: 1.5;
-    margin: 0 auto;
-    padding: 0 10px;
-  }
-}
 
 /* === Align header nav links to the right on large screens === */
 @media (min-width: 769px) {
