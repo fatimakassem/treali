@@ -358,56 +358,72 @@ html,body{
 
 
 
+/* Main-we-do Section */
 .main-we-do {
-  /* your existing background, padding, etc. */
   background-color: #f5f5f5;
-  padding: 60px 20px;
-  /* text-align: center;  -- remove or comment out this if you don’t want center text */
+  padding: 80px 20px;
+  /* By default, the text-align is removed so that the flex children determine their own alignment */
 }
 
-/* The new flex container around h2 + p */
 .mw-row {
   display: flex;
-  gap: 20px;        /* space between heading and paragraph */
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;          /* Space between heading and paragraph columns */
   max-width: 1200px;
-  margin: 0 auto;   /* center the row in the screen */
+  margin: 0 auto;
 }
 
-/* Make <h2> and <p> share space nicely */
-.mw-row h2{ 
-  font-size: 2.2rem;
+/* Each column takes equal space */
+.mw-col {
+  flex: 1;
+  box-sizing: border-box;
+}
+
+/* Heading Styles */
+.mw-heading h2 {
+  font-size: 2.8rem;
   color: #2c3e50;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-weight: 700;
   position: relative;
-          }
- .mw-row h2::after {
+}
+
+/* Decorative underline below the heading */
+.mw-heading h2::after {
   content: "";
   display: block;
   width: 80px;
-  height: 3px;
+  height: 4px;
   background-color: #548473;
-  margin: 15px auto 0;
-  border-radius: 3px;
-}
-.mw-row p {
-  flex: 2;   /* each gets half the width in a 2-column layout */
-  margin: 0;
+  margin: 20px 0 0;
+  border-radius: 2px;
 }
 
-/* On small screens, stack them */
+/* Description Styles */
+.mw-description p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  margin: 0;
+  text-align: left;
+}
+
+/* Responsive: Stack columns on mobile */
 @media (max-width: 768px) {
   .mw-row {
     flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
   }
-  .mw-row h2,
-  .mw-row p {
-    flex: none;    /* revert so they take full width */
-    margin-bottom: 15px;
+  .mw-heading h2 {
+    font-size: 2rem;
+  }
+  .mw-description p {
+    font-size: 1rem;
+    text-align: center; /* Optional: Center the paragraph on mobile */
   }
 }
-
 
 
 
