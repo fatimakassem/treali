@@ -1,4 +1,4 @@
-/* === Global overflow fix === */
+  /* === Global overflow fix === */
 html, body {
   margin: 0;
   padding: 0;
@@ -213,6 +213,7 @@ html,body{
   list-style: none;
   display: flex;
   gap: 30px;
+  margin-left: auto;
 }
 
 .main-nav a {
@@ -1914,12 +1915,7 @@ color: rgb(34, 104, 58);
 
 
 
-/* === Align header nav links to the right on large screens === */
-@media (min-width: 769px) {
-  .main-nav ul {
-    margin-left: auto;
-  }
-}
+
 
 /* === AOS animation fallback improved === */
 .services_col[data-aos="fade-up"] {
