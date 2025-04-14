@@ -2101,22 +2101,22 @@ margin-top: 40px;
   .tt-description {
     text-align: left
   }
-  .timeline::before {
+/*  .timeline::before {
     left: 20px;
-  }
+  }*/
   .turnover-timeline h2 {
   font-size: 1.5rem;
   }
   .timeline-item {
     width: 100%;
-    padding-left: 50px;
+   /* padding-left: 50px;
     text-align: left;
-    left: 0 !important;
+    left: 0 !important;*/
   }
-  .timeline-item .marker {
+ /* .timeline-item .marker {
     left: 10px !important;
     right: auto;
-  }
+  }*/
 }
 
 
