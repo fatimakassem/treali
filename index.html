@@ -355,41 +355,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
+
+
     <section class="turnover" id="turnover">
   <div class="turnover-container">
     <h2>Annual Turnover</h2>
     <div class="turnover-content">
-      <!-- Left Column: Timeline/Chart -->
+      <!-- Left Column: Turnover Chart -->
       <div class="turnover-chart">
-        <div class="year" data-year="2021">
-          <span class="value" data-value="4.70">0</span>
-          <p>Million USD<br><small>2021</small></p>
+        <div class="year">
+          <span class="value" data-target="4.70">0.00</span>
+          <p class="year-label">2021</p>
         </div>
-        <div class="year" data-year="2020">
-          <span class="value" data-value="9.17">0</span>
-          <p>Million USD<br><small>2020</small></p>
+        <div class="year">
+          <span class="value" data-target="9.17">0.00</span>
+          <p class="year-label">2020</p>
         </div>
-        <div class="year" data-year="2019">
-          <span class="value" data-value="12.24">0</span>
-          <p>Million USD<br><small>2019</small></p>
+        <div class="year">
+          <span class="value" data-target="12.24">0.00</span>
+          <p class="year-label">2019</p>
         </div>
-        <div class="year" data-year="2018">
-          <span class="value" data-value="8.56">0</span>
-          <p>Million USD<br><small>2018</small></p>
+        <div class="year">
+          <span class="value" data-target="8.56">0.00</span>
+          <p class="year-label">2018</p>
         </div>
       </div>
-      <!-- Right Column: Narrative / Infographic Description -->
+      <!-- Right Column: Description -->
       <div class="turnover-desc">
         <p>
-          Over the past few years, Treali Co. has experienced dynamic growth and transformation.
-          Our turnover reflects our commitment to quality construction and sustainable solutions.
-          Each year shows not only numbers but our journey toward excellence.
+          Over the past few years, Treali Co. has grown its annual turnover steadily, 
+          reflecting our unwavering commitment to quality, innovation, and sustainable construction practices. 
+          Each milestone represents not just a figure, but our journey toward excellence.
         </p>
       </div>
     </div>
   </div>
 </section>
-
+    
     
 
 
@@ -553,30 +555,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     <script>
-  // Function to animate numbers from 0 to target value
-  function animateNumbers() {
-    document.querySelectorAll(".turnover-chart .year .value").forEach(function(el) {
-      let target = parseFloat(el.getAttribute("data-value"));
-      let duration = 1500; // ms
-      let startTime = null;
+  document.addEventListener("DOMContentLoaded", function() {
+    const counters = document.querySelectorAll(".turnover-chart .year .value");
+    const animationDuration = 2000; // Animation duration in milliseconds
 
-      function updateNumber(timestamp) {
-        if (!startTime) startTime = timestamp;
-        let progress = timestamp - startTime;
-        let current = Math.min(target, (target * progress) / duration);
-        el.textContent = current.toFixed(2);
-        if (progress < duration) {
-          requestAnimationFrame(updateNumber);
+    counters.forEach(counter => {
+      const target = parseFloat(counter.getAttribute("data-target"));
+      let start = 0;
+      const stepTime = 50; // update every 50ms
+      const increment = target / (animationDuration / stepTime);
+
+      const updateCounter = () => {
+        start += increment;
+        if (start < target) {
+          counter.innerText = start.toFixed(2);
+          setTimeout(updateCounter, stepTime);
         } else {
-          el.textContent = target.toFixed(2);
+          counter.innerText = target.toFixed(2);
         }
-      }
-      requestAnimationFrame(updateNumber);
-    });
-  }
+      };
 
-  // Initialize animation when the turnover section is in view (for simplicity, here we start on load)
-  window.addEventListener("load", animateNumbers);
+      updateCounter();
+    });
+  });
 </script>
 
 
