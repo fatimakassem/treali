@@ -1907,8 +1907,6 @@ color: rgb(34, 104, 58);
 
 /* === Fix AOS animation visibility for services === */
 [data-aos] {
-  opacity: 1 !important;
-  transform: none !important;
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
