@@ -479,7 +479,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="last">
     <p>Copyright &copy; 2024 All rights reserved by Fatima Kassem.</p></div>
 </section> 
-<a href="#" class="top"><img src="images/arrow.png" ></a>
+<a href="#" class="top"><img src="images/arrow.png" ></a
+
+
+
+                                                         <!-- AOS Animation Setup -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  window.onload = function () {
+    AOS.init({
+      once: true,           // Only animate once while scrolling
+      duration: 800,        // Animation duration in ms
+      easing: 'ease-in-out' // Smooth easing
+    });
+
+    // Force refresh after images load or small layout delays
+    setTimeout(() => {
+      AOS.refresh();
+    }, 500);
+  };
+</script>
+
+
+    
 </body>
 </html>
 
