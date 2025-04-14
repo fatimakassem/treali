@@ -1095,69 +1095,95 @@ margin-top: 40px;
 
 
 
-/* === Recent Project Section === */
-.recentProj {
+/* === Project Highlight Section === */
+.project-highlight {
   background-color: #f2f7f6;
   padding: 60px 20px;
   text-align: center;
 }
 
-.reccent {
-  max-width: 800px;
-  margin: auto;
+.project-highlight .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-.reccent h5 {
-  font-size: 1.4em;
-  line-height: 1.6;
-  color: #2d4f4a;
-  margin-bottom: 10px;
+/* Section title */
+.project-highlight h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  font-weight: 700;
+  position: relative;
 }
 
-.reccent p {
-  font-size: 1em;
-  color: #777;
-  margin-bottom: 20px;
+.project-highlight h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #548473;
+  margin: 15px auto 0;
+  border-radius: 3px;
 }
 
-.reccent img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
+/* Flex container for image and video */
+.project-content {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Left column: Project image/description */
+.project-image,
+.project-video {
+  flex: 1 1 50%;
+  background: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* === Video Section === */
-.video {
-  background-color: #ffffff;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.video h1 {
-  font-size: 2em;
-  color: #2d4f4a;
-  margin-bottom: 30px;
-}
-
-.video video {
+.project-image img {
   width: 100%;
-  max-width: 800px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  height: auto;
+  display: block;
 }
 
-/* === Responsive tweaks === */
-@media (max-width: 600px) {
-  .reccent h5 {
-    font-size: 1.1em;
-  }
+.project-description {
+  text-align: left;
+  padding: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
 
-  .video h1 {
-    font-size: 1.5em;
+/* Right column: Video */
+.project-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 768px) {
+  .project-content {
+    flex-direction: column;
+  }
+  .project-image,
+  .project-video {
+    flex: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .project-highlight h2 {
+    font-size: 2rem;
   }
 }
+
+
 
 
 
