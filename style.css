@@ -359,6 +359,7 @@ html,body{
 
 
 .main-we-do {
+  margin: 10%;
   background-color: #f5f5f5;
   padding: 40px 20px;    /* Reduced overall padding */
 }
@@ -416,9 +417,10 @@ html,body{
   }
   .mw-heading h2 {
     font-size: 1.8rem;
+    text-align: center;
   }
   .mw-description p {
-    text-align: center;    /* or left, if you prefer */
+    text-align: left;    /* or left, if you prefer */
   }
 }
 
