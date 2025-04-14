@@ -369,7 +369,7 @@ html,body{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;          /* Space between heading and paragraph columns */
+  gap: 20px;          /* Space between heading and paragraph columns */
   max-width: 1300px;
   margin: 0 auto;
 }
@@ -396,7 +396,7 @@ html,body{
   width: 80px;
   height: 4px;
   background-color: #548473;
-  margin: 20px 0 0;
+  margin: 15px 0 0;
   border-radius: 2px;
 }
 
@@ -419,10 +419,7 @@ html,body{
   .mw-heading h2 {
     font-size: 2rem;
   }
-  .mw-description p {
-    font-size: 1rem;
-    text-align: left; /* Optional: Center the paragraph on mobile */
-  }
+ 
 }
 
 
