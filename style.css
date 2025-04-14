@@ -359,56 +359,37 @@ html,body{
 
 
 .main-we-do {
-  background-color: #f9f9f9;
-  padding: 70px 20px;
-  text-align: center;
+  /* your existing background, padding, etc. */
+  background-color: #f5f5f5;
+  padding: 60px 20px;
+  /* text-align: center;  -- remove or comment out this if you don’t want center text */
 }
 
-.mw-wrapper {
-  max-width: 700px;
-  width: 100%;
-  padding: 0 10px;
+/* The new flex container around h2 + p */
+.mw-row {
+  display: flex;
+  gap: 20px;        /* space between heading and paragraph */
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;   /* center the row in the screen */
 }
 
-.main-we-do h2 {
-  font-size: 2rem;
-  color: #2d4f4a;
-  margin-bottom: 15px;
-  font-weight: 700;
-  position: relative;
+/* Make <h2> and <p> share space nicely */
+.mw-row h2,
+.mw-row p {
+  flex: 1;   /* each gets half the width in a 2-column layout */
+  margin: 0;
 }
 
-.mw-line {
-  width: 60px;
-  height: 3px;
-  background-color: #548473;
-  margin: 0 auto 25px;
-  border-radius: 2px;
-}
-
-.main-we-do p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #555;
-  margin: 0 auto;
-  padding: 0 5px;
-  text-align: left;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .main-we-do {
-    padding: 60px 15px;
+/* On small screens, stack them */
+@media (max-width: 768px) {
+  .mw-row {
+    flex-direction: column;
   }
-
-  .main-we-do h2 {
-    font-size: 1.6rem;
-  }
-
-  .main-we-do p {
-    font-size: 1rem;
-    line-height: 1.7;
-    align-items: center;
+  .mw-row h2,
+  .mw-row p {
+    flex: none;    /* revert so they take full width */
+    margin-bottom: 15px;
   }
 }
 
