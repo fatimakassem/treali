@@ -361,7 +361,7 @@ html,body{
 /* Main-we-do Section */
 .main-we-do {
   background-color: #f5f5f5;
-  padding: 80px 20px;
+  padding: 50px 10px;
   /* By default, the text-align is removed so that the flex children determine their own alignment */
 }
 
@@ -398,6 +398,7 @@ html,body{
   background-color: #548473;
   margin: 15px 0 0;
   border-radius: 2px;
+  position: relative;
 }
 
 /* Description Styles */
