@@ -1095,29 +1095,22 @@ margin-top: 40px;
 
 
 
-/* === Project Highlight Section === */
+/* === Recent Project Combined Section === */
 .project-highlight {
   background-color: #f2f7f6;
   padding: 60px 20px;
-  text-align: center;
+  text-align: center;       /* Title centered */
 }
 
-.project-highlight .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-/* Section title */
 .project-highlight h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #2c3e50;
   margin-bottom: 40px;
   font-weight: 700;
   position: relative;
 }
 
+/* Optional underline styling */
 .project-highlight h2::after {
   content: "";
   display: block;
@@ -1128,58 +1121,77 @@ margin-top: 40px;
   border-radius: 3px;
 }
 
-/* Flex container for image and video */
-.project-content {
+/* Container for the two columns (image/desc + video) */
+.project-row {
   display: flex;
-  gap: 30px;
-  justify-content: space-between;
   align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Left column: Project image/description */
-.project-image,
+/* Left Column: Image + Paragraph */
+.project-desc {
+  flex: 1 1 50%;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;          /* So text is left-aligned */
+}
+
+/* Adjust image styling */
+.project-desc img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* The paragraph */
+.project-desc p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Right Column: Video */
 .project-video {
   flex: 1 1 50%;
+  display: flex;            /* To center the video in column if you want */
+  align-items: center;
+  justify-content: center;
   background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.project-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.project-description {
-  text-align: left;
   padding: 20px;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #555;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* Right column: Video */
 .project-video video {
   width: 100%;
-  height: auto;
-  display: block;
+  max-width: 500px;         /* Limit the video width for aesthetics */
+  border-radius: 8px;
 }
 
-/* Responsive: stack columns on small screens */
+/* === Mobile (Stack Columns) === */
 @media (max-width: 768px) {
-  .project-content {
+  .project-row {
     flex-direction: column;
   }
-  .project-image,
-  .project-video {
-    flex: none;
-    width: 100%;
+
+  .project-desc, .project-video {
     margin-bottom: 20px;
   }
-  .project-highlight h2 {
-    font-size: 2rem;
+
+  .project-desc, .project-video {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .project-desc p {
+    text-align: center;    /* So the text is centered on mobile if you prefer */
   }
 }
 
