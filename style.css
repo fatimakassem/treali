@@ -42,15 +42,28 @@ html,body{
     }
 
    .projsection h2 {
-      font-size: 1.5em;
+      font-size: 1em;
       margin-bottom: 10px;
     }
 
    .projsection  p {
-      max-width: 800px;
-      margin: 0 auto 40px;
-      font-size: 1.1em;
-    }
+     font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  font-weight: 700;
+  position: relative;
+}
+
+/* Optional underline styling */
+ .projsection p::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #548473;
+  margin: 15px auto 0;
+  border-radius: 3px;
+}
 
     .grid {
       display: flex;
@@ -348,7 +361,7 @@ html,body{
   padding: 70px 20px;
   display: flex;
   justify-content: center;
-  text-align: left;
+  text-align: center;
 }
 
 .mw-wrapper {
