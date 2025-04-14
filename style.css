@@ -2098,8 +2098,14 @@ margin-top: 40px;
 
 /* Responsive: On mobile, stack items centrally */
 @media (max-width: 768px) {
+  .tt-description {
+    text-align: left
+  }
   .timeline::before {
     left: 20px;
+  }
+  .turnover-timeline h2 {
+  font-size: 1.5rem;
   }
   .timeline-item {
     width: 100%;
