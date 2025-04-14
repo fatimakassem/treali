@@ -358,69 +358,68 @@ html,body{
 
 
 
-/* Main-we-do Section */
 .main-we-do {
   background-color: #f5f5f5;
-  padding: 50px 10px;
-  /* By default, the text-align is removed so that the flex children determine their own alignment */
+  padding: 40px 20px;    /* Reduced overall padding */
 }
 
+/* Flex container */
 .mw-row {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;          /* Space between heading and paragraph columns */
-  max-width: 1300px;
+  align-items: flex-start; /* ensures heading and paragraph top-align */
+  gap: 20px;               /* less gap between columns */
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-/* Each column takes equal space */
-.mw-col {
-  flex: 1;
   box-sizing: border-box;
 }
 
-/* Heading Styles */
+.mw-col {
+  flex: 1;
+}
+
+/* Heading Column */
 .mw-heading h2 {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   color: #2c3e50;
-  margin-bottom: 20px;
-  font-weight: 700;
+  margin: 0;               /* remove extra margin above/below */
+  padding-bottom: 10px;    /* small space before the line */
+  text-align: center;      /* center the text AND the line */
   position: relative;
 }
 
-/* Decorative underline below the heading */
+/* Decorative line under heading, centered */
 .mw-heading h2::after {
   content: "";
   display: block;
   width: 80px;
-  height: 4px;
+  height: 3px;
   background-color: #548473;
-  margin: 15px 0 0;
+  margin: 10px auto 0 auto; /* center horizontally (auto left/right) */
   border-radius: 2px;
-  position: relative;
 }
 
-/* Description Styles */
+/* Description Column */
 .mw-description p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #555;
-  margin: 0;
-  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+  margin: 0;               /* remove default paragraph margin */
+  box-sizing: border-box;
 }
 
-/* Responsive: Stack columns on mobile */
+/* Responsive stacking on mobile */
 @media (max-width: 768px) {
   .mw-row {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;             /* less gap on mobile */
     padding: 0 10px;
   }
   .mw-heading h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
- 
+  .mw-description p {
+    text-align: center;    /* or left, if you prefer */
+  }
 }
 
 
