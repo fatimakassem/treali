@@ -1964,104 +1964,108 @@ margin-top: 40px;
 
 
 
-/* Turnover Section Styling */
+/* Turnover Section Overall */
 .turnover {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 60px 20px;
   text-align: center;
+  overflow: hidden;
 }
 
 .turnover-container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
+/* Section Title */
 .turnover h2 {
   font-size: 2.5rem;
+  margin-bottom: 20px;
   color: #2c3e50;
-  margin-bottom: 40px;
   position: relative;
 }
-
 .turnover h2::after {
   content: "";
   display: block;
   width: 80px;
   height: 4px;
   background-color: #548473;
-  margin: 15px auto 0;
+  margin: 10px auto;
   border-radius: 2px;
 }
 
-/* Layout for content */
+/* Layout: Two columns on desktop */
 .turnover-content {
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
   gap: 40px;
+  align-items: center;
 }
 
-/* Left: Chart / Timeline */
+/* Left Column: Turnover Chart */
 .turnover-chart {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  flex: 1 1 50%;
+  gap: 20px;
 }
-
-.turnover-chart .year {
+.year {
   background: #f2f7f6;
-  border-radius: 8px;
   padding: 20px;
+  border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: transform 0.3s;
 }
-
-.turnover-chart .year:hover {
+.year:hover {
   transform: translateY(-5px);
 }
-
-.turnover-chart .year .value {
+.year .value {
+  display: block;
   font-size: 2.5rem;
   color: #548473;
-  font-weight: 700;
-  display: block;
+  font-weight: bold;
   margin-bottom: 10px;
 }
-
-/* Right: Description */
-.turnover-desc {
-  flex: 1 1 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+.year .year-label {
+  font-size: 1rem;
+  color: #333;
 }
 
+/* Right Column: Description */
+.turnover-desc {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
 .turnover-desc p {
   font-size: 1.2rem;
   line-height: 1.8;
   color: #444;
+  margin: 0;
 }
 
-/* Responsive: stack columns on mobile */
+/* Responsive: Stack columns on small screens */
 @media (max-width: 768px) {
   .turnover-content {
     flex-direction: column;
+    gap: 20px;
   }
-
-  .turnover-chart, .turnover-desc {
-    flex: none;
-    width: 100%;
-  }
-
-  .turnover-desc p {
-    font-size: 1rem;
+  .turnover-desc {
     text-align: center;
   }
+  .turnover h2 {
+    font-size: 2rem;
+  }
+  .turnover-desc p {
+    font-size: 1rem;
+  }
 }
+
+
+
 
 
 
