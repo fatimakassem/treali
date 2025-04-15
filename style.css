@@ -2158,7 +2158,7 @@ margin-top: 40px;
 
 .client-carousel {
   padding: 80px 20px;
-  background-color: #f2f7f6;
+  background-color: #fff;
   text-align: center;
 }
 
@@ -2441,7 +2441,7 @@ margin-top: 40px;
   .footer-container {
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
   }
 
   .footer-about, .footer-links, .footer-contact {
@@ -2449,7 +2449,7 @@ margin-top: 40px;
   }
 
   .footer-social {
-    justify-content: center;
+    justify-content: left;
   }
 }
 
