@@ -2099,15 +2099,14 @@ margin-top: 40px;
 /* Responsive: On mobile, stack items centrally */
 @media (max-width: 768px) {
   .tt-description {
-    text-align: left
+    text-align: left;
   }
    
   .turnover-timeline h2 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
   }
-  .timeline-item {
-    width: 100%;
-   .timeline::before {
+  
+  .timeline::before {
     left: 50%;
     transform: translateX(-50%);
   }
@@ -2131,7 +2130,6 @@ margin-top: 40px;
   .timeline-item .info {
     margin: 0 auto;
   }
-}
 }
 
 
