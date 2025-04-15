@@ -641,31 +641,7 @@ padding:30px 0;
 
 
 
-.big{
-    margin-top:-5%;
-}
-  .staff{
-    width:80%;
-    margin:auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
-    
-  }
-  .staff-col{
-    flex-basis:48%;
-    padding:30px 2px;
-  }
-  .staff-col h1{
-    margin-bottom: 5%;
-    font-size: 25px;
-  }
-  .staff-col p{
-    margin-bottom: 5%;
-    font-size: 25px;
-  }
-  .staff-col img{
-    width:100%;
-  }
+
 
 
 
@@ -674,31 +650,7 @@ padding:30px 0;
 
 
 
-  .labor{
-    width:80%;
-    margin:auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
-    margin-bottom: 10%;
-  }
-  .labor-col{
-    flex-basis:48%;
-    padding:30px 2px;
-  }
-  .labor-col h1{
-    margin-bottom: 5%;
-    font-size: 25px;
-
-  }
-  .labor-col p{
-
-    margin-bottom: 5%;
-    font-size: 25px;
-  }
-  .labor-col img{
-    width:100%;
-  }
-
+  
 
 
 
@@ -823,14 +775,7 @@ margin: 0;
         font-size: 52px;
     }
 
-    .staff-col p{
-        
-        font-size: 20px;
-      }
-      .labor-col p{
-        
-        font-size: 20px;
-      }
+ 
       
     }
    
@@ -2069,6 +2014,188 @@ margin-top: 40px;
   }
 }
 
+
+
+
+
+
+
+/* ============ BIG SECTION (Staff & Labor) ============ */
+.big {
+  background-color: #fefefe;
+  padding: 80px 20px;
+  /* optional subtle background texture or image:
+  background: url('images/bg-texture.jpg') repeat; */
+}
+
+/* Common styles for both staff and labor sections */
+.big section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 40px 30px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+/* Staff Section – Key Staff & Technicians */
+/* (Text on left; image on right) */
+.staff .staff-col:first-child {
+  flex: 1;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.staff .staff-col:first-child h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.staff .staff-col:first-child p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.staff .staff-col:first-child ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.staff .staff-col:first-child ul li {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.staff .staff-col:first-child ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #548473;
+  font-size: 1.1rem;
+}
+
+.staff .staff-col:last-child {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* You may add a background overlay image here if needed */
+}
+
+.staff .staff-col:last-child img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.staff .staff-col:last-child img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* Organisation Chart Button Styling */
+.staff a.hero-btn {
+  display: inline-block;
+  background: #548473;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+  align-self: flex-start;
+}
+
+.staff a.hero-btn:hover {
+  background: #406457;
+}
+
+/* Labor Section – Labor Force */
+/* (Image on left; text on right) */
+.labor .labor-col:first-child {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.labor .labor-col:first-child img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.labor .labor-col:first-child img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+.labor .labor-col:last-child {
+  flex: 1;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.labor .labor-col:last-child h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.labor .labor-col:last-child p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ============ Responsive Adjustments ============ */
+@media (max-width: 768px) {
+  .big section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .staff .staff-col,
+  .labor .labor-col {
+    padding: 10px;
+  }
+  .staff .staff-col:first-child,
+  .labor .labor-col:last-child {
+    padding: 0;
+  }
+  .staff .staff-col:last-child,
+  .labor .labor-col:first-child {
+    margin-bottom: 20px;
+  }
+  .staff a.hero-btn {
+    align-self: center;
+  }
+}
 
 
 
