@@ -23,15 +23,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="icon" href="images/logo.jpg">
   <!-- مكتبات JS -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-  window.onload = function () {
-    AOS.init({
-      once: true, // optional: animations run only once
-      duration: 800, // animation speed
-    });
-  };
-</script>
+  
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -661,7 +653,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     function goToSlide(index) {
       const offset = -index * 100;
-      track.style.transform = translateX(${offset}%);
+      track.style.transform = `translateX(${offset}%)`;
     }
 
     function nextSlide() {
@@ -676,7 +668,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
                                                              <!-- AOS Animation Setup -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   window.onload = function () {
     AOS.init({
@@ -693,6 +684,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </script>
     
     
+
+<!-- AOS Animation Setup -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: 'ease-in-out'
+    });
+    setTimeout(() => {
+      AOS.refresh();
+    }, 500);
+  });
+</script>
+
 </body>
 </html>
-
