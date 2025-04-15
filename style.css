@@ -30,10 +30,7 @@ html,body{
   overflow-x: hidden;
 }
 
-[data-aos] {
-  opacity: 1 !important;
-  transform: none !important;
-}
+
 
     .projsection {
       padding: 50px 20px;
