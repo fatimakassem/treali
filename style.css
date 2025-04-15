@@ -2062,10 +2062,10 @@ margin-top: 40px;
   .staffs-info {
     clip-path: none;
     margin-bottom: 30px;
-    text-align: center;
+    text-align: left;
   }
   .staffs-info h1 {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 }
 
