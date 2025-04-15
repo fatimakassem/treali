@@ -2020,98 +2020,70 @@ margin-top: 40px;
 
 
 
-/* ============ BIG SECTION (Staff & Labor) ============ */
+/* === BIG WRAPPER === */
 .big {
   background-color: #fefefe;
-  padding: 80px 20px;
-  /* optional subtle background texture or image:
-  background: url('images/bg-texture.jpg') repeat; */
+  padding: 60px 20px;
 }
 
-/* Common styles for both staff and labor sections */
+/* === COMMON SECTION STYLE (Staff + Labor) === */
 .big section {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column; /* mobile-first stacking */
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  padding: 40px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   margin-bottom: 40px;
   overflow: hidden;
+  padding: 30px 20px;
+  gap: 30px;
 }
 
-/* Staff Section – Key Staff & Technicians */
-/* (Text on left; image on right) */
-.staff .staff-col:first-child {
+/* === SHARED STYLES FOR COLUMNS === */
+.staff-col,
+.labor-col {
   flex: 1;
-  padding-right: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%;
 }
 
-.staff .staff-col:first-child h1 {
-  font-size: 2.5rem;
+/* === HEADINGS & TEXT === */
+.staff-col h1,
+.labor-col h1 {
+  font-size: 2rem;
   color: #2c3e50;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  text-align: center;
 }
 
-.staff .staff-col:first-child p {
-  font-size: 1.1rem;
+.staff-col p,
+.labor-col p {
+  font-size: 1.05rem;
   line-height: 1.6;
   color: #555;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-.staff .staff-col:first-child ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.staff .staff-col:first-child ul li {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 12px;
-  padding-left: 25px;
-  position: relative;
-}
-
-.staff .staff-col:first-child ul li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #548473;
-  font-size: 1.1rem;
-}
-
-.staff .staff-col:last-child {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* You may add a background overlay image here if needed */
-}
-
-.staff .staff-col:last-child img {
+/* === STAFF SECTION IMAGE === */
+.staff-col img,
+.labor-col img {
   width: 100%;
   max-width: 500px;
+  display: block;
+  margin: 0 auto;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.staff .staff-col:last-child img:hover {
-  transform: scale(1.05);
+.staff-col img:hover,
+.labor-col img:hover {
+  transform: scale(1.03);
   filter: brightness(1.05);
 }
 
-/* Organisation Chart Button Styling */
+/* === BUTTON STYLING === */
 .staff a.hero-btn {
   display: inline-block;
   background: #548473;
@@ -2122,78 +2094,42 @@ margin-top: 40px;
   text-transform: uppercase;
   font-weight: 600;
   transition: background 0.3s ease;
-  margin-top: 20px;
-  align-self: flex-start;
+  margin: 20px auto 0;
 }
 
 .staff a.hero-btn:hover {
   background: #406457;
 }
 
-/* Labor Section – Labor Force */
-/* (Image on left; text on right) */
-.labor .labor-col:first-child {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.labor .labor-col:first-child img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.labor .labor-col:first-child img:hover {
-  transform: scale(1.05);
-  filter: brightness(1.05);
-}
-
-.labor .labor-col:last-child {
-  flex: 1;
-  padding-left: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.labor .labor-col:last-child h1 {
-  font-size: 2.5rem;
-  color: #2c3e50;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.labor .labor-col:last-child p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #555;
-}
-
-/* ============ Responsive Adjustments ============ */
-@media (max-width: 768px) {
+/* === DESKTOP ENHANCEMENTS === */
+@media (min-width: 768px) {
   .big section {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 40px;
   }
-  .staff .staff-col,
-  .labor .labor-col {
-    padding: 10px;
-  }
+
   .staff .staff-col:first-child,
   .labor .labor-col:last-child {
-    padding: 0;
+    padding-right: 30px;
+    text-align: left;
   }
-  .staff .staff-col:last-child,
+
   .labor .labor-col:first-child {
-    margin-bottom: 20px;
+    padding-right: 0;
   }
+
+  .staff-col h1,
+  .labor-col h1,
+  .staff-col p,
+  .labor-col p {
+    text-align: left;
+  }
+
   .staff a.hero-btn {
-    align-self: center;
+    margin: 20px 0 0 0;
   }
 }
 
