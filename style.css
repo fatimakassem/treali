@@ -1969,67 +1969,103 @@ margin-top: 40px;
 
 
 
-/* Updated Equipment Section Styling */
-.staffs {
-  /* Use a subtle background overlay with an optional background image */
-  background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
-              url('images/equipment-bg.jpg') center/cover no-repeat;
+/* Modern Equipment Section – Diagonal Split Design */
+.staffs-modern {
+  position: relative;
   padding: 80px 20px;
-  text-align: center;
-  position: relative;
+  background: #f5f5f5;
+  overflow: hidden;
 }
 
-.staffs h1 {
+.staffs-modern-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+/* Left Column with Diagonal Background */
+.staffs-info {
+  flex: 1 1 500px;
+  background: linear-gradient(135deg, rgba(84,132,115,0.9) 0%, rgba(84,132,115,0.7) 70%);
+  padding: 40px 30px;
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  margin-right: -5%;
+}
+
+.staffs-info h1 {
   font-size: 2.5rem;
-  color: #2c3e50;
   margin-bottom: 20px;
-  position: relative;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.staffs p,
-.staffs h5 {
+.staffs-info p {
   font-size: 1.1rem;
-  color: #555;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-/* Split layout for the equipment section */
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
+.staffs-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.staffs-col,
-.eqq-col {
+.staffs-info li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.staffs-info li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Right Column for the Equipment Image */
+.staffs-image {
   flex: 1 1 500px;
-  padding: 10px 20px;
+  padding: 20px;
 }
 
-/* Modern hover effect on the equipment image */
-.eqq-col img {
+.staffs-image img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.eqq-col img:hover {
+.staffs-image img:hover {
   transform: scale(1.05);
   filter: brightness(1.1);
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .staffs h1 {
-    font-size: 2rem;
-  }
-  .row {
+  .staffs-modern-container {
     flex-direction: column;
+  }
+  .staffs-info, 
+  .staffs-image {
+    flex: unset;
+    margin: 0;
+  }
+  .staffs-info {
+    clip-path: none;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .staffs-info h1 {
+    font-size: 2rem;
   }
 }
 
