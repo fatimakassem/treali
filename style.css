@@ -2121,9 +2121,15 @@ margin-top: 40px;
     padding-right: 0;
   }
 
-  .staff-col h1,
-  .labor-col h1,
-  .staff-col p,
+  .staff-col h1{
+    text-align: left;
+  }
+  .labor-col h1{
+    text-align: left;
+  }
+  .staff-col p{
+    text-align: left;
+  }
   .labor-col p {
     text-align: left;
   }
