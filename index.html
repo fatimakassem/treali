@@ -654,21 +654,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     
     <script>
-  const track = document.querySelector('.carousel-track');
-  const slides = document.querySelectorAll('.client-slide');
-  let currentSlide = 0;
+  document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.client-slide');
+    let currentSlide = 0;
 
-  function goToSlide(index) {
-    const offset = -index * 100;
-    track.style.transform = translateX(${offset}%);
-  }
+    function goToSlide(index) {
+      const offset = -index * 100;
+      track.style.transform = translateX(${offset}%);
+    }
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    goToSlide(currentSlide);
-  }
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      goToSlide(currentSlide);
+    }
 
-  setInterval(nextSlide, 3000); // Change every 3 seconds
+    setInterval(nextSlide, 3000); // Change every 3 seconds
+  });
 </script>
 
 
