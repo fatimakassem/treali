@@ -494,34 +494,7 @@ html,body{
 
 
 
-.equipments{
-    width:80%;
-    margin:auto;
-    text-align: center;
-    padding-top:50px;
-}
-.equipments-col{
-    flex-basis:31%;
-    border-radius:10px;
-    margin-bottom: 5%;
-    text-align: left;
-    justify-content: space-between;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-.equipments-col img{
-    width:100%;
-    height: 100%;
-    display: block;
-}
-.equipments-col p{
-    padding: 0;
-}
-.equipments-col h3{
-    margin-top:16px;
-    margin-bottom: 15px;
-    text-align: center;
-}
+
 
 
 .cta{
@@ -697,14 +670,7 @@ padding:30px 0;
 
 
 
- .eqq-col{
-    flex-basis:48%;
-    padding:30px 2px;
-  }
- .eqq-col img{
-    width:100%;
-  }
-
+ 
 
 
 
@@ -833,51 +799,7 @@ margin: 0;
 
 @media only screen and (max-width: 600px) {
 
-    eqq-col img{
-    margin-bottom: -10%;
-  }
-    
-    div.inner-we-do{
-      font-size: 30px;
-    }
-    div.registration_col{
-        flex-wrap: wrap;
-        width: 100%;
-        display: block;
-    }
-    .row{
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    
-    .about_col{
-        text-align: center;
-        margin: auto;
-        margin-right: -70px;
-        
-    }
-    .about_col p{
-
-        text-align: center;
-    }
-    
-    .nav img{
-        width: 100%;
-    
-    }
-    
-    .projects-col img{
-        width: 100%;
-        height: 70%;
-        
-    }
-    .projects-col{
-        width: 90%;
-        height: 80%;
-        align-items: center;
-       margin-left: 10px;
-        
-    }
+   
     .main-client{
         gap: 7px;
     }
@@ -916,40 +838,7 @@ margin: 0;
 
 
 
-  .equips{
-    width: 80%;
-    margin: auto;
-    
-    padding-top: 30px;
-    padding-bottom: 50px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-   
-  }
-  .inner-equip{
-    flex-basis: 60%;
-    padding: 50px 2px;
-    
-  }
-  .inner-equip h1{
-    margin-bottom: 45px;
-    margin-left: 10px;
-    font-size: 35px;
-  }
-  .inner-equip p{
-    font-size: 25px;
-  }
-  .inner-equip h5{
-    margin-top: 20px;
-    margin-top: 20px;
-    margin-left: 10px;
-    font-size: 30px;
-  }
-  .inner-equip img{
-    width: 100%;
-  }
-
-
+  
 
 
 
@@ -1106,16 +995,6 @@ margin-top: 40px;
 }
 
 
-.back{
-    margin-top: 100px;
-    margin-bottom: 100px;
-    min-height: 15vh;
-    width:100%;
-    background-image:linear-gradient(rgba(232, 240, 237, 0),rgba(4, 30, 24, 0)),url(images/back11.jpg);
-    background-position: center;
-    background-size: cover;
-    position:relative;
-}
 
 
 
@@ -1590,25 +1469,14 @@ margin-top: 40px;
   }
   
   
-  
-  /* remove the below if you don't want smooth scrolling */
-  html,
-  body {
-    scroll-behavior: smooth;
-  }
+
 @media only screen and (max-width: 600px) {
     .top img{
     width: 10%;
   }
   }
 
-.equipss{
-    
-   
-    background-position: center;
-    background-size: cover;
-   
-  }
+
   .inner-equipss{
     margin-left: 5%;
     margin-right: 5%;
@@ -1717,46 +1585,7 @@ margin-top: 40px;
 }
 
 
-.staffs{
-    width:100%;
-    margin:auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
-    
-    background-position: center;
-    background-size: cover;
-    
-  }
-  .staffs-col{
-    flex-basis:48%;
-    padding:30px 2px;
-  }
-  .staffs-col h1{
-    margin-bottom: 5%;
-    margin-left: 10%;
-    font-size: 25px;
-   
-  }
-  .staffs-col p{
-    text-align:left;
-    margin-bottom: 10%;
-    margin-left: 10%;
-    font-size:20px;
-   
-  }
-  .staffs-col h5{
 
-    margin-left: 15%;
-    text-align: left;
-    font-size: 25px;
-    line-height: 1.9;
-  }
-  .staffs-col img{
-    width:70%;
-    margin-top: 20%;
-    margin-left: 10%;
-   
-  }
   
   .section {
       padding: 50px 20px;
@@ -2132,6 +1961,79 @@ margin-top: 40px;
     margin: 0 auto;
   }
 }
+
+
+
+
+
+
+
+
+/* Updated Equipment Section Styling */
+.staffs {
+  /* Use a subtle background overlay with an optional background image */
+  background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+              url('images/equipment-bg.jpg') center/cover no-repeat;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.staffs h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.staffs p,
+.staffs h5 {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Split layout for the equipment section */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.staffs-col,
+.eqq-col {
+  flex: 1 1 500px;
+  padding: 10px 20px;
+}
+
+/* Modern hover effect on the equipment image */
+.eqq-col img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.eqq-col img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .staffs h1 {
+    font-size: 2rem;
+  }
+  .row {
+    flex-direction: column;
+  }
+}
+
+
 
 
 
