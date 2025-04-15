@@ -2231,6 +2231,127 @@ margin-top: 40px;
 
 
 
+.contact-us {
+  background: linear-gradient(to right, #f2f7f6, #e0f2ec);
+  padding: 100px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-container {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.contact-details p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: #2c3e50;
+}
+
+.contact-details i {
+  margin-right: 10px;
+  color: #548473;
+}
+
+/* FORM STYLE */
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.contact-form .form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form label {
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  background: #fff;
+  padding: 0 5px;
+  font-size: 0.85rem;
+  color: #548473;
+  pointer-events: none;
+}
+
+.contact-form button {
+  display: inline-block;
+  background: #548473;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #406457;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-info, .contact-form {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
 
 /* === AOS animation fallback improved === */
 .services_col[data-aos="fade-up"] {
