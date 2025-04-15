@@ -2145,62 +2145,80 @@ margin-top: 40px;
 
 
 
-.clients-modern {
+.client-strip {
   padding: 80px 20px;
-  background-color: #f2f7f6;
+  background-color: #fff;
   text-align: center;
 }
 
-.clients-modern h2 {
-  font-size: 2.5rem;
+.client-strip h2 {
+  font-size: 2.3rem;
   color: #2c3e50;
   margin-bottom: 10px;
 }
 
-.clients-modern p {
+.client-strip p {
   font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 40px;
+  color: #666;
+  margin-bottom: 30px;
 }
 
-.clients-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+/* Scrollable Wrapper */
+.client-scroll-wrapper {
+  overflow-x: auto;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.client-scroll {
+  display: flex;
   gap: 20px;
-  justify-items: center;
-  align-items: center;
+  padding: 10px 0;
+  width: max-content;
 }
 
-.client-logo {
-  background: #fff;
+/* Individual client item */
+.client-item {
+  min-width: 140px;
+  background: #f2f7f6;
+  border-radius: 12px;
   padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-  max-width: 150px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  flex-shrink: 0;
 }
 
-.client-logo img {
-  width: 100%;
-  height: auto;
+.client-item img {
+  width: 60px;
+  height: 60px;
   object-fit: contain;
+  margin-bottom: 10px;
 }
 
-.client-logo:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+.client-item span {
+  display: block;
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 600;
 }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .clients-modern h2 {
-    font-size: 1.8rem;
-  }
-  .clients-modern p {
-    font-size: 1rem;
-  }
+/* Hover effect */
+.client-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+
+/* Mobile tweak: no scroll bar */
+.client-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.client-scroll-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
 
 
 
