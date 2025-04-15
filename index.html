@@ -482,54 +482,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-    <section class="clients-marquee" id="clients">
+    <section class="client-carousel" id="clients">
   <h2>Our Clients</h2>
-  <div class="marquee">
-    <div class="marquee-content">
-      <!-- Repeat client items as needed -->
-      <div class="client-box">
+  <div class="carousel-wrapper">
+    <div class="carousel-track">
+      <div class="client-slide">
         <img src="images/unicef.jpg" alt="UNICEF" />
         <span>UNICEF</span>
       </div>
-      <div class="client-box">
+      <div class="client-slide">
         <img src="images/fifa.jpg" alt="FIFA" />
         <span>FIFA</span>
       </div>
-      <div class="client-box">
+      <div class="client-slide">
         <img src="images/sheild.jpg" alt="SHEILD" />
         <span>SHEILD</span>
       </div>
-      <div class="client-box">
+      <div class="client-slide">
         <img src="images/meyah.jpg" alt="مياه لبنان الجنوبي" />
         <span>مياه لبنان الجنوبي</span>
       </div>
-      <div class="client-box">
+      <div class="client-slide">
         <img src="images/pic1.jpg" alt="وزارة الطاقة" />
         <span>وزارة الطاقة والمياه</span>
       </div>
-      <div class="client-box">
+      <div class="client-slide">
         <img src="images/pic2.jpg" alt="مجلس الجنوب" />
         <span>مجلس الجنوب</span>
       </div>
-      <div class="client-box">
+      <div class="client-slide">
         <img src="images/pic3.jpg" alt="الليطاني" />
         <span>نهر الليطاني</span>
       </div>
-
-      <!-- Duplicate for seamless loop -->
-      <div class="client-box">
-        <img src="images/unicef.jpg" alt="UNICEF" />
-        <span>UNICEF</span>
-      </div>
-      <div class="client-box">
-        <img src="images/fifa.jpg" alt="FIFA" />
-        <span>FIFA</span>
-      </div>
-      <!-- (Repeat all if needed for longer scroll) -->
     </div>
   </div>
 </section>
 
+
+    <script>
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.client-slide');
+  let currentSlide = 0;
+
+  function goToSlide(index) {
+    const offset = -index * 100;
+    track.style.transform = translateX(${offset}%);
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    goToSlide(currentSlide);
+  }
+
+  setInterval(nextSlide, 3000); // Change every 3 seconds
+</script>
+
+
+    
     
 
     
