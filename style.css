@@ -2145,77 +2145,79 @@ margin-top: 40px;
 
 
 
-.client-strip {
+.clients-marquee {
   padding: 80px 20px;
-  background-color: #fff;
+  background-color: #fefefe;
   text-align: center;
+  overflow: hidden;
 }
 
-.client-strip h2 {
+.clients-marquee h2 {
   font-size: 2.3rem;
   color: #2c3e50;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
-.client-strip p {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 30px;
+/* Marquee container */
+.marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
-/* Scrollable Wrapper */
-.client-scroll-wrapper {
-  overflow-x: auto;
-  padding-bottom: 10px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.client-scroll {
+/* Marquee animation */
+.marquee-content {
   display: flex;
-  gap: 20px;
-  padding: 10px 0;
-  width: max-content;
+  animation: scroll-marquee 40s linear infinite;
+  gap: 40px;
+  align-items: center;
 }
 
-/* Individual client item */
-.client-item {
-  min-width: 140px;
-  background: #f2f7f6;
-  border-radius: 12px;
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+.client-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-shrink: 0;
+  background: #f2f7f6;
+  padding: 15px 20px;
+  border-radius: 10px;
+  min-width: 140px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
 }
 
-.client-item img {
+.client-box img {
   width: 60px;
   height: 60px;
   object-fit: contain;
   margin-bottom: 10px;
 }
 
-.client-item span {
-  display: block;
+.client-box span {
   font-size: 0.95rem;
   color: #333;
   font-weight: 600;
 }
 
-/* Hover effect */
-.client-item:hover {
+.client-box:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Mobile tweak: no scroll bar */
-.client-scroll-wrapper::-webkit-scrollbar {
-  display: none;
+/* Keyframe for scrolling */
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
-.client-scroll-wrapper {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+
+/* Responsive text */
+@media (max-width: 600px) {
+  .clients-marquee h2 {
+    font-size: 1.8rem;
+  }
 }
 
 
