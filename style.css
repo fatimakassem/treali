@@ -241,7 +241,10 @@ html,body{
   list-style: none;
   display: flex;
   gap: 30px;
+  justify-content: flex-end; /* ✅ aligns links to the right */
+  align-items: center;
 }
+
 
 .main-nav a {
   text-decoration: none;
