@@ -212,7 +212,7 @@ html,body{
 
 .main-header {
   background-color: #fff;
-  padding: 10px 0;
+  padding: 5px 0; /* thinner header */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   z-index: 1000;
 }
@@ -228,16 +228,19 @@ html,body{
 }
 
 .logo img {
-  height: 60px;
+  height: 75px; /* slightly larger logo */
   object-fit: contain;
 }
 
 /* Navigation */
+.main-nav {
+  margin-left: auto; /* move nav to the right */
+}
+
 .main-nav ul {
   list-style: none;
   display: flex;
   gap: 30px;
-  margin-right: auto;
 }
 
 .main-nav a {
@@ -302,6 +305,10 @@ html,body{
     display: flex;
   }
 }
+
+
+
+
 
 
 
