@@ -437,7 +437,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- Key Staff & Technicians Section -->
   <section class="staff">
-    <div class="staff-col">
+    <div class="staff-col" data-aos="fade-up">
       <h1>Key Staff & Technicians</h1>
       <p>
         Treali Co. For Trading and Contracting employs more than 15 full-time employees. Our team includes:
@@ -457,7 +457,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- Labor Force Section -->
   <section class="labor">
-    <div class="labor-col">
+    <div class="labor-col" data-aos="fade-up">
       <img src="images/labor.jpeg" alt="Labor Force at Work">
     </div>
     <div class="labor-col">
@@ -689,22 +689,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- AOS Animation Setup -->
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    AOS.init({
-      once: true,
-      duration: 800,
-      easing: 'ease-in-out'
-    });
 
-    setTimeout(() => {
-      AOS.refresh();
-    }, 500);
-
-    // Trigger animation for initial view
-    document.body.classList.add("aos-animate");
-  });
-</script>
 
 </body>
 </html>
