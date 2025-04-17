@@ -2449,9 +2449,12 @@ margin-top: 40px;
 
 /* Responsive */
 @media (max-width: 768px) {
+  .site-footer {
+    text-align: left;
+  }
   .footer-container {
     flex-direction: column;
-    align-items: center;
+   
     text-align: left;
   }
   .footer-links{
